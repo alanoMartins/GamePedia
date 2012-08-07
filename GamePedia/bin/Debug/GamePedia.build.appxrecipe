@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>TREINAMENTO11</Machine>
+    <WindowsUser>MIC11</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\GamePedia.exe">
+      <PackagePath>GamePedia.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\GamePedia.pdb">
+      <PackagePath>GamePedia.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Item\gow3(4).jpg">
+      <PackagePath>Assets\Item\gow3(4).jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Console\play1(1).jpg">
+      <PackagePath>Assets\Console\play1(1).jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Console\play2(1).jpg">
+      <PackagePath>Assets\Console\play2(1).jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Console\play3(1).jpg">
+      <PackagePath>Assets\Console\play3(1).jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Console\xbox360(1).jpg">
+      <PackagePath>Assets\Console\xbox360(1).jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Item\ffIX.jpg">
+      <PackagePath>Assets\Item\ffIX.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Item\gow3(3).jpg">
+      <PackagePath>Assets\Item\gow3(3).jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Item\gow3.jpg">
+      <PackagePath>Assets\Item\gow3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Console\play1.jpg">
+      <PackagePath>Assets\Console\play1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Console\play2.jpg">
+      <PackagePath>Assets\Console\play2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Console\play3.jpg">
+      <PackagePath>Assets\Console\play3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Producer\microsoft.jpg">
+      <PackagePath>Assets\Producer\microsoft.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Producer\sony(1).jpg">
+      <PackagePath>Assets\Producer\sony(1).jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Producer\sony.jpg">
+      <PackagePath>Assets\Producer\sony.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Console\xbox.jpg">
+      <PackagePath>Assets\Console\xbox.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Console\xbox360.jpg">
+      <PackagePath>Assets\Console\xbox360.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Item\AsuraItem.png">
+      <PackagePath>Assets\Item\AsuraItem.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\GroupedProducerPage.xaml">
+      <PackagePath>GroupedProducerPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\GroupedItemsPage.xaml">
+      <PackagePath>GroupedItemsPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\GroupDetailPage.xaml">
+      <PackagePath>GroupDetailPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\ItemDetailPage.xaml">
+      <PackagePath>ItemDetailPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\SplitGenrePage.xaml">
+      <PackagePath>SplitGenrePage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

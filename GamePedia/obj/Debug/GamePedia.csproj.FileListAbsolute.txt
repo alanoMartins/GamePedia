@@ -1,0 +1,75 @@
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\bin\Debug\GamePedia.exe
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\bin\Debug\GamePedia.pdb
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\bin\Debug\resources.pri
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\bin\Debug\AppxManifest.xml
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\bin\Debug\GamePedia.build.appxrecipe
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\App.g.i.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\App.g.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\Common\StandardStyles.g.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GroupedItemsPage.g.i.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GroupedItemsPage.g.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GroupDetailPage.g.i.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GroupDetailPage.g.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\ItemDetailPage.g.i.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\ItemDetailPage.g.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\App.xaml
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\Common\StandardStyles.xaml
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GroupedItemsPage.xaml
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GroupDetailPage.xaml
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\ItemDetailPage.xaml
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GamePedia.exe
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GamePedia.pdb
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\priconfig.xml
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\layout.resfiles
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\resources.resfiles
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\pri.resfiles
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\LanguageQualifiers.txt
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\ProjectArchitectures.txt
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GroupPage.g.i.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GroupPage.g.cs
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\GroupPage.xaml
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\priconfig.xml.intermediate
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\layout.resfiles.intermediate
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\resources.resfiles.intermediate
+C:\Users\MIC10\Documents\Visual Studio 2012\Projects\GamePedia\GamePedia\obj\Debug\pri.resfiles.intermediate
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\App.g.i.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\App.g.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\Common\StandardStyles.g.i.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\Common\StandardStyles.g.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GroupedItemsPage.g.i.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GroupedItemsPage.g.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GroupDetailPage.g.i.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GroupDetailPage.g.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\ItemDetailPage.g.i.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\ItemDetailPage.g.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\App.xaml
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\Common\StandardStyles.xaml
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GroupedItemsPage.xaml
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GroupDetailPage.xaml
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\ItemDetailPage.xaml
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GamePedia.exe
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GamePedia.pdb
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\GamePedia.exe
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\GamePedia.pdb
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\resources.pri
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\AppxManifest.xml
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\bin\Debug\GamePedia.build.appxrecipe
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\priconfig.xml.intermediate
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\layout.resfiles.intermediate
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\resources.resfiles.intermediate
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\pri.resfiles.intermediate
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\priconfig.xml
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\layout.resfiles
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\resources.resfiles
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\pri.resfiles
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\LanguageQualifiers.txt
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\ProjectArchitectures.txt
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GroupedProducerPage.g.i.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GroupedProducerPage.g.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\GroupedProducerPage.xaml
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\SplitGenrePage.g.i.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\SplitGenrePage.g.cs
+C:\Users\MIC11\Desktop\GamePedia\GamePedia\obj\Debug\SplitGenrePage.xaml
