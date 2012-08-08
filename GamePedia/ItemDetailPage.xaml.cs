@@ -16,6 +16,9 @@ using Windows.UI.Xaml.Navigation;
 using GamePedia.DataModel;
 using GamePedia.Common;
 
+using Windows.ApplicationModel.DataTransfer;
+using System.Text;
+using Windows.Storage.Streams;
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
 
 namespace GamePedia
@@ -43,6 +46,7 @@ namespace GamePedia
         /// session.  This will be null the first time a page is visited.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
+            DataTransferManager.GetForCurrentView().DataRequested += ItemDetailPage_DataRequested;
             // Allow saved page state to override the initial item to display
             if (pageState != null && pageState.ContainsKey("SelectedItem"))
             {
@@ -57,6 +61,26 @@ namespace GamePedia
             this.flipView.SelectedItem = item;
         }
 
+        private void ItemDetailPage_DataRequested(DataTransferManager sender, DataRequestedEventArgs args)
+        {
+            var request = args.Request;
+            var item = (GamePediaDataItem)this.flipView.SelectedItem;
+            request.Data.Properties.Title = "Share your favorites games";
+
+            //Share text and description
+            var game = "\n\rGAME\r\n";
+            game = string.Join("\n\r", item.Title);
+            game = ("\r\n\rDESCRIPTION\r\n" + item.Description);
+            request.Data.SetText(game);
+
+            //Share imagens
+            //ToDo:Verificar a path do item
+            var reference = RandomAccessStreamReference.CreateFromUri(new Uri(item.GetImagePath()));
+            request.Data.Properties.Thumbnail = reference;
+            request.Data.SetBitmap(reference);
+            request.Data.SetBitmap(reference);
+        }
+
         /// <summary>
         /// Preserves state associated with this page in case the application is suspended or the
         /// page is discarded from the navigation cache.  Values must conform to the serialization
@@ -68,6 +92,8 @@ namespace GamePedia
             var selectedItem = (GamePediaDataItem)this.flipView.SelectedItem;
             this.parameters.ItemID = selectedItem.UniqueId;
             pageState["SelectedItem"] = this.parameters;
+
+            DataTransferManager.GetForCurrentView().DataRequested -= ItemDetailPage_DataRequested;
         }
     }
 }
