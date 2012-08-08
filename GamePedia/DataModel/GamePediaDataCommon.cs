@@ -66,6 +66,11 @@ namespace GamePedia.DataModel
             }
         }
 
+        public String GetImagePath()
+        {
+            return _imagePath;
+        }
+
         public void SetImage(String path)
         {
             this._image = null;
