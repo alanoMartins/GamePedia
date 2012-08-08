@@ -99,13 +99,16 @@ namespace GamePedia
             foreach (var group in groups)
             {
                 var items = new List<GamePediaDataItem>();
-                _results.Add(group.Title, items);
+                _results.Add(group.Title, items.Distinct().ToList());
 
-                foreach (var item in group.Items)
+                foreach (var item in group.Items.Distinct())
                 {
-                    if (item.Title.ToLower().Contains(query) || item.Description.ToLower().Contains(query))
+                    if (item.Title.ToLower().Contains(query))
                     {
-                        all.Add(item);
+                        if (!all.Contains(item))
+                        {
+                            all.Add(item);
+                        }
                         items.Add(item);
                     }
                 }

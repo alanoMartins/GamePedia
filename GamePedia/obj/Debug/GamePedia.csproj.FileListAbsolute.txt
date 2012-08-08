@@ -37,3 +37,6 @@ C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\obj\Debug\resources.resfiles
 C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\obj\Debug\pri.resfiles
 C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\obj\Debug\LanguageQualifiers.txt
 C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\obj\Debug\ProjectArchitectures.txt
+C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\obj\Debug\SharePage.g.i.cs
+C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\obj\Debug\SharePage.g.cs
+C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\obj\Debug\SharePage.xaml

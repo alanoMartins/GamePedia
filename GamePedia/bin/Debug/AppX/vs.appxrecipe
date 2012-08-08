@@ -5,7 +5,7 @@
     <WindowsUser>MIC11</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>0F2062ED87B303C1CBA2573B3446549E7E6EFB286537211836EB81966DC13027</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>57D4C94C9BFE0402EFB5FB61D7222C5815415233F0AF86245B4E3919362CEC32</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>61fb6e61-961e-47f0-bcaf-f0a6ba5e3fbe_1.0.0.0_neutral__hb6p1ah5mg0da</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>61fb6e61-961e-47f0-bcaf-f0a6ba5e3fbe_hb6p1ah5mg0da!App</RegisteredUserModeAppID>
     <RegisteredPackageID>61fb6e61-961e-47f0-bcaf-f0a6ba5e3fbe</RegisteredPackageID>
@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-08-08T15:11:15.719</Modified>
+      <Modified>2012-08-08T15:29:32.032</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\bin\Debug\GamePedia.exe">
       <PackagePath>GamePedia.exe</PackagePath>
-      <Modified>2012-08-08T15:11:15.485</Modified>
+      <Modified>2012-08-08T15:27:55.166</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\bin\Debug\GamePedia.pdb">
       <PackagePath>GamePedia.pdb</PackagePath>
-      <Modified>2012-08-08T15:11:15.454</Modified>
+      <Modified>2012-08-08T15:27:55.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Genre\action.png">
       <PackagePath>Assets\Genre\action.png</PackagePath>
@@ -65,7 +65,7 @@
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-08-07T02:44:43.756</Modified>
+      <Modified>2012-08-08T15:27:51.816</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
@@ -178,7 +178,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2012-08-08T15:11:15.594</Modified>
+      <Modified>2012-08-08T15:29:31.969</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

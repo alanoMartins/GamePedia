@@ -17,10 +17,16 @@
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="GamePedia.App">
       <VisualElements DisplayName="GamePedia" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="GamePedia" ForegroundText="light" BackgroundColor="#464646">
         <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="Assets\SplashScreen.png" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#FF7300" />
       </VisualElements>
       <Extensions>
         <Extension Category="windows.search" />
+        <Extension Category="windows.shareTarget">
+          <ShareTarget>
+            <DataFormat>text</DataFormat>
+            <DataFormat>uri</DataFormat>
+          </ShareTarget>
+        </Extension>
       </Extensions>
     </Application>
   </Applications>

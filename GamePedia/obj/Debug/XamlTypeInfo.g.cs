@@ -134,6 +134,10 @@ namespace GamePedia.GamePedia_XamlTypeInfo
 
         private object Activate_8_SearchPage() { return new GamePedia.SearchPage(); }
 
+        private object Activate_9_BooleanNegationConverter() { return new GamePedia.Common.BooleanNegationConverter(); }
+
+        private object Activate_10_SharePage() { return new GamePedia.SharePage(); }
+
 
         private IXamlType CreateXamlType(string typeName)
         {
@@ -205,6 +209,18 @@ namespace GamePedia.GamePedia_XamlTypeInfo
             case "GamePedia.SearchPage":
                 userType = new XamlUserType(this, typeName, typeof(GamePedia.SearchPage), GetXamlTypeByName("GamePedia.Common.LayoutAwarePage"));
                 userType.Activator = Activate_8_SearchPage;
+                xamlType = userType;
+                break;
+
+            case "GamePedia.Common.BooleanNegationConverter":
+                userType = new XamlUserType(this, typeName, typeof(GamePedia.Common.BooleanNegationConverter), GetXamlTypeByName("Object"));
+                userType.Activator = Activate_9_BooleanNegationConverter;
+                xamlType = userType;
+                break;
+
+            case "GamePedia.SharePage":
+                userType = new XamlUserType(this, typeName, typeof(GamePedia.SharePage), GetXamlTypeByName("GamePedia.Common.LayoutAwarePage"));
+                userType.Activator = Activate_10_SharePage;
                 xamlType = userType;
                 break;
 

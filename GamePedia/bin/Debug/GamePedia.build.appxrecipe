@@ -128,6 +128,9 @@
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\bin\Debug\SearchPage.xaml">
       <PackagePath>SearchPage.xaml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\bin\Debug\SharePage.xaml">
+      <PackagePath>SharePage.xaml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
     </AppxPackagedFile>

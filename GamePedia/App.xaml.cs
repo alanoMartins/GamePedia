@@ -133,5 +133,15 @@ namespace GamePedia
             }
             GamePedia.SearchPage.Activate(args.QueryText, args.PreviousExecutionState);
         }
+
+        /// <summary>
+        /// Invoked when the application is activated as the target of a sharing operation.
+        /// </summary>
+        /// <param name="args">Details about the activation request.</param>
+        protected override void OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs args)
+        {
+            var shareTargetPage = new GamePedia.SharePage();
+            shareTargetPage.Activate(args);
+        }
     }
 }
