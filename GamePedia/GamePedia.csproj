@@ -133,6 +133,12 @@
     <Compile Include="Common\LayoutAwarePage.cs" />
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="SearchPage.xaml.cs">
+	<DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SplitGenrePage.xaml.cs">
+      <DependentUpon>SplitGenrePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -196,6 +202,14 @@
     <Page Include="ItemDetailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SearchPage.xaml">
+	<SubType>Designer</SubType>
+	<Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplitGenrePage.xaml">
+	<SubType>Designer</SubType>
+	<Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
