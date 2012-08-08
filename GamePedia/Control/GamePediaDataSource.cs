@@ -129,15 +129,15 @@ namespace GamePedia.Data
 
             var playStation3 = new GamePediaDataConsole(Guid.NewGuid().ToString(),
                     "Playstation 3",
-                    "Assets/Console/play3(1).jpg",
+                    "Assets/Console/ps3 480x360.png",
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
             var playStation2 = new GamePediaDataConsole(Guid.NewGuid().ToString(),
                     "Playstation 2",
-                    "Assets/Console/play2(1).jpg",
+                    "Assets/Console/ps3 480x360.png",
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
             var playStation = new GamePediaDataConsole(Guid.NewGuid().ToString(),
                     "Playstation",
-                    "Assets/Console/play1(1).jpg",
+                    "Assets/Console/ps3 480x360.png",
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
 
 
@@ -150,7 +150,7 @@ namespace GamePedia.Data
 
             var xBox360 = new GamePediaDataConsole(Guid.NewGuid().ToString(),
                     "XBox 360",
-                    "Assets/Console/xbox360(1).jpg",
+                    "Assets/Console/xb 480x360.png",
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
 
             microsoft.Groups.Add(xBox360);
@@ -188,7 +188,7 @@ namespace GamePedia.Data
 
             var gow3 = new GamePediaDataItem(Guid.NewGuid().ToString(),
                     "God of War 3",
-                    "Assets/Item/gow3(4).jpg",
+                    "Assets/Item/gow3.jpg",
                     "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                     ITEM_CONTENT,
                     sony, action, playStation3);

@@ -148,35 +148,34 @@
     <None Include="GamePedia_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Badge.png" />
+    <Content Include="Assets\Console\md 480x360.png" />
+    <Content Include="Assets\Console\n64 480x360.png" />
+    <Content Include="Assets\Console\pc 480x360.png" />
+    <Content Include="Assets\Console\ps3 480x360.png" />
+    <Content Include="Assets\Console\sn 480x360.png" />
+    <Content Include="Assets\Console\wii 480x360.png" />
+    <Content Include="Assets\Console\xb 480x360.png" />
     <Content Include="Assets\Genre\action.png" />
     <Content Include="Assets\Genre\adventure.png" />
-    <Content Include="Assets\Genre\genres.png" />
+    <Content Include="Assets\Genre\fight.png" />
     <Content Include="Assets\Genre\race.png" />
     <Content Include="Assets\Genre\rpg.png" />
-    <Content Include="Assets\Item\gow3%284%29.jpg" />
-    <Content Include="Assets\Console\play1%281%29.jpg" />
-    <Content Include="Assets\Console\play2%281%29.jpg" />
-    <Content Include="Assets\Console\play3%281%29.jpg" />
-    <Content Include="Assets\Console\xbox360%281%29.jpg" />
+    <Content Include="Assets\Genre\sports.png" />
+    <Content Include="Assets\Item\gow3.jpg" />
     <Content Include="Assets\Item\AsuraItem.png" />
     <Content Include="Assets\Item\ffIX.jpg" />
-    <Content Include="Assets\Item\gow3%283%29.jpg" />
-    <Content Include="Assets\Item\gow3.jpg" />
     <Content Include="Assets\Logo.png" />
-    <Content Include="Assets\Console\play1.jpg" />
-    <Content Include="Assets\Console\play2.jpg" />
-    <Content Include="Assets\Console\play3.jpg" />
     <Content Include="Assets\Producer\microsoft.jpg" />
     <Content Include="Assets\Producer\sony%281%29.jpg" />
     <Content Include="Assets\Producer\sony.jpg" />
-    <Content Include="Assets\Console\xbox.jpg" />
-    <Content Include="Assets\Console\xbox360.jpg" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\LightGray.png" />
     <Content Include="Assets\MediumGray.png" />
     <Content Include="Assets\DarkGray.png" />
+    <Content Include="Assets\WideLogo.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

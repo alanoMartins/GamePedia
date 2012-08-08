@@ -22,8 +22,8 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="GamePedia.exe" EntryPoint="GamePedia.App">
-      <VisualElements DisplayName="GamePedia" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="GamePedia" ForegroundText="light" BackgroundColor="#464646">
-        <DefaultTile ShowName="allLogos" />
+      <VisualElements DisplayName="GamePedia" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="GamePedia" ForegroundText="light" BackgroundColor="#FF7300">
+        <DefaultTile ShowName="allLogos" ShortName="GamePedia" WideLogo="Assets\WideLogo.png" />
         <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#FF7300" />
       </VisualElements>
       <Extensions>
@@ -46,6 +46,5 @@
     <build:Item Name="OperatingSystem" Version="6.2.8400.0 (winmain_win8rc.120518-1423)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="11.0.50522.1" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="4.0.30319.17561" />
-    <build:Item Name="MakePri.exe" Version="6.2.8400.0 (winmain_win8rc.120518-1423)" />
   </build:Metadata>
 </Package>

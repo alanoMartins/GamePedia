@@ -19,20 +19,47 @@
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\bin\Debug\GamePedia.pdb">
       <PackagePath>GamePedia.pdb</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Badge.png">
+      <PackagePath>Assets\Badge.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\md 480x360.png">
+      <PackagePath>Assets\Console\md 480x360.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\n64 480x360.png">
+      <PackagePath>Assets\Console\n64 480x360.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\pc 480x360.png">
+      <PackagePath>Assets\Console\pc 480x360.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\ps3 480x360.png">
+      <PackagePath>Assets\Console\ps3 480x360.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\sn 480x360.png">
+      <PackagePath>Assets\Console\sn 480x360.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\wii 480x360.png">
+      <PackagePath>Assets\Console\wii 480x360.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\xb 480x360.png">
+      <PackagePath>Assets\Console\xb 480x360.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Genre\action.png">
       <PackagePath>Assets\Genre\action.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Genre\adventure.png">
       <PackagePath>Assets\Genre\adventure.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Genre\genres.png">
-      <PackagePath>Assets\Genre\genres.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Genre\fight.png">
+      <PackagePath>Assets\Genre\fight.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Genre\race.png">
       <PackagePath>Assets\Genre\race.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Genre\rpg.png">
       <PackagePath>Assets\Genre\rpg.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Genre\sports.png">
+      <PackagePath>Assets\Genre\sports.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Item\AsuraItem.png">
       <PackagePath>Assets\Item\AsuraItem.png</PackagePath>
@@ -62,38 +89,15 @@
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\DarkGray.png">
       <PackagePath>Assets\DarkGray.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Item\gow3(4).jpg">
-      <PackagePath>Assets\Item\gow3(4).jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\play1(1).jpg">
-      <PackagePath>Assets\Console\play1(1).jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\play2(1).jpg">
-      <PackagePath>Assets\Console\play2(1).jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\play3(1).jpg">
-      <PackagePath>Assets\Console\play3(1).jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\xbox360(1).jpg">
-      <PackagePath>Assets\Console\xbox360(1).jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Item\ffIX.jpg">
-      <PackagePath>Assets\Item\ffIX.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Item\gow3(3).jpg">
-      <PackagePath>Assets\Item\gow3(3).jpg</PackagePath>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\WideLogo.png">
+      <PackagePath>Assets\WideLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Item\gow3.jpg">
       <PackagePath>Assets\Item\gow3.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\play1.jpg">
-      <PackagePath>Assets\Console\play1.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\play2.jpg">
-      <PackagePath>Assets\Console\play2.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\play3.jpg">
-      <PackagePath>Assets\Console\play3.jpg</PackagePath>
+    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Item\ffIX.jpg">
+      <PackagePath>Assets\Item\ffIX.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Producer\microsoft.jpg">
       <PackagePath>Assets\Producer\microsoft.jpg</PackagePath>
@@ -103,12 +107,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Producer\sony.jpg">
       <PackagePath>Assets\Producer\sony.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\xbox.jpg">
-      <PackagePath>Assets\Console\xbox.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\Assets\Console\xbox360.jpg">
-      <PackagePath>Assets\Console\xbox360.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>

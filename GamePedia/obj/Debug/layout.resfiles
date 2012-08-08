@@ -1,22 +1,20 @@
-Assets\Console\play1(1).jpg
-Assets\Console\play1.jpg
-Assets\Console\play2(1).jpg
-Assets\Console\play2.jpg
-Assets\Console\play3(1).jpg
-Assets\Console\play3.jpg
-Assets\Console\xbox.jpg
-Assets\Console\xbox360(1).jpg
-Assets\Console\xbox360.jpg
+Assets\Badge.png
+Assets\Console\md 480x360.png
+Assets\Console\n64 480x360.png
+Assets\Console\pc 480x360.png
+Assets\Console\ps3 480x360.png
+Assets\Console\sn 480x360.png
+Assets\Console\wii 480x360.png
+Assets\Console\xb 480x360.png
 Assets\DarkGray.png
 Assets\Genre\action.png
 Assets\Genre\adventure.png
-Assets\Genre\genres.png
+Assets\Genre\fight.png
 Assets\Genre\race.png
 Assets\Genre\rpg.png
+Assets\Genre\sports.png
 Assets\Item\AsuraItem.png
 Assets\Item\ffIX.jpg
-Assets\Item\gow3(3).jpg
-Assets\Item\gow3(4).jpg
 Assets\Item\gow3.jpg
 Assets\LightGray.png
 Assets\Logo.png
@@ -27,6 +25,7 @@ Assets\Producer\sony.jpg
 Assets\SmallLogo.png
 Assets\SplashScreen.png
 Assets\StoreLogo.png
+Assets\WideLogo.png
 App.xaml
 Common\StandardStyles.xaml
 GroupDetailPage.xaml
