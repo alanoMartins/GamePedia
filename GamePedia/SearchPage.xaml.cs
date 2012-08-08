@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using GamePedia.Common;
 using GamePedia.Data;
 using GamePedia.DataModel;
 using Windows.ApplicationModel.Activation;
@@ -28,6 +29,7 @@ namespace GamePedia
         private UIElement _previousContent;
         private ApplicationExecutionState _previousExecutionState;
 
+        private DataItemParameters parameters = null;
         //Colecao de GamePediaDataItem representando resultado da pesquisa
         private Dictionary<string, List<GamePediaDataItem>> _results = new Dictionary<string, List<GamePediaDataItem>>();
 
@@ -87,7 +89,7 @@ namespace GamePedia
             //       in Filter_SelectionChanged below.
 
             var filterList = new List<Filter>();
-            filterList.Add(new Filter("All", 0, true));
+            filterList.Add(new Filter("All", "", 0, true));
 
             //Pesquisa de itens
             
@@ -99,7 +101,6 @@ namespace GamePedia
             foreach (var group in groups)
             {
                 var items = new List<GamePediaDataItem>();
-                _results.Add(group.Title, items.Distinct().ToList());
 
                 foreach (var item in group.Items.Distinct())
                 {
@@ -110,9 +111,13 @@ namespace GamePedia
                             all.Add(item);
                         }
                         items.Add(item);
+                        
                     }
                 }
-                filterList.Add(new Filter(group.Title, items.Count, false));
+                _results.Add(group.Title, items.Distinct().ToList());
+                if(items.Count > 0)
+                    filterList.Add(new Filter(group.Title, group.UniqueId, items.Count, false));                
+                
             }
             filterList[0].Count = all.Count;
 
@@ -168,6 +173,7 @@ namespace GamePedia
                 //       to a collection of items with bindable Image, Title, Subtitle, and Description properties
 
                 this.DefaultViewModel["Results"] = _results[selectedFilter.Name];
+                this.parameters = new DataItemParameters() { GroupID = selectedFilter.Id };
 
                 // Ensure results are found
                 object results;
@@ -207,14 +213,16 @@ namespace GamePedia
         private sealed class Filter : GamePedia.Common.BindableBase
         {
             private String _name;
+            private string _id;
             private int _count;
             private bool _active;
 
-            public Filter(String name, int count, bool active = false)
+            public Filter(String name, String Id, int count, bool active = false)
             {
                 this.Name = name;
                 this.Count = count;
                 this.Active = active;
+                this._id = Id;
             }
 
             public override String ToString()
@@ -226,6 +234,11 @@ namespace GamePedia
             {
                 get { return _name; }
                 set { if (this.SetProperty(ref _name, value)) this.OnPropertyChanged("Description"); }
+            }
+
+            public String Id
+            {
+                get { return this._id; }
             }
 
             public int Count
@@ -248,7 +261,8 @@ namespace GamePedia
 
         private void OnItemClick(object sender, ItemClickEventArgs e)
         {
-            this.Frame.Navigate(typeof(ItemDetailPage), ((GamePediaDataItem)e.ClickedItem).UniqueId);
+            this.parameters.ItemID = ((GamePediaDataItem)e.ClickedItem).UniqueId;
+            this.Frame.Navigate(typeof(ItemDetailPage), this.parameters);
         }
     }
 }

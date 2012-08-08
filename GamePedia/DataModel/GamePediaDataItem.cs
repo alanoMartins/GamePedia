@@ -24,6 +24,7 @@ namespace GamePedia.DataModel
                 if (!group.Items.Contains(this))
                     group.Items.Add(this);
             }
+            this._producer.Items.Add(this);
         }
 
         private GamePediaDataGroupBase _producer;

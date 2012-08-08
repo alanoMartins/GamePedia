@@ -89,10 +89,13 @@ namespace GamePedia
             string query = args.QueryText.ToLower();
             var allQuery = GamePediaDataSource.GetGroups("AllGroups");
 
-            foreach (var group in allQuery)
+            foreach (var group in allQuery.Distinct())
             {
-                if (group.Title.ToLower().StartsWith(query))
-                    args.Request.SearchSuggestionCollection.AppendQuerySuggestion(group.Title);
+                foreach (var item in group.Items.Distinct())
+                {
+                    if (item.Title.ToLower().StartsWith(query))
+                        args.Request.SearchSuggestionCollection.AppendQuerySuggestion(item.Title);
+                }
             }
         }
 

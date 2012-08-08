@@ -55,9 +55,16 @@ namespace GamePedia
             this.parameters = (DataItemParameters)navigationParameter;
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
             var item = GamePediaDataSource.GetItem(this.parameters.ItemID);
-            var group = GamePediaDataSource.GetGroup(this.parameters.GroupID);
-            this.DefaultViewModel["Group"] = group;
-            this.DefaultViewModel["Items"] = group.Items.Distinct();
+            if (!string.IsNullOrEmpty(this.parameters.GroupID))
+            {
+                var group = GamePediaDataSource.GetGroup(this.parameters.GroupID);
+                this.DefaultViewModel["Group"] = group;
+                this.DefaultViewModel["Items"] = group.Items.Distinct();
+            }
+            else
+            {
+                this.DefaultViewModel["Items"] = new GamePediaDataItem[1] { GamePediaDataSource.GetItem(parameters.ItemID) };
+            }
             this.flipView.SelectedItem = item;
         }
 
