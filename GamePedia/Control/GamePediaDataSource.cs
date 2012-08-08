@@ -166,7 +166,7 @@ namespace GamePedia.Data
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
             var adventure = new GamePediaDataGenre(
                 Guid.NewGuid().ToString(),
-                "Adventure",
+                "Adventure", 
                 "Assets/Genre/adventure.png",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
             var rpg = new GamePediaDataGenre(
