@@ -130,6 +130,10 @@ namespace GamePedia.GamePedia_XamlTypeInfo
 
         private object Activate_6_ItemDetailPage() { return new GamePedia.ItemDetailPage(); }
 
+        private object Activate_7_BooleanToVisibilityConverter() { return new GamePedia.Common.BooleanToVisibilityConverter(); }
+
+        private object Activate_8_SearchPage() { return new GamePedia.SearchPage(); }
+
 
         private IXamlType CreateXamlType(string typeName)
         {
@@ -189,6 +193,18 @@ namespace GamePedia.GamePedia_XamlTypeInfo
             case "GamePedia.ItemDetailPage":
                 userType = new XamlUserType(this, typeName, typeof(GamePedia.ItemDetailPage), GetXamlTypeByName("GamePedia.Common.LayoutAwarePage"));
                 userType.Activator = Activate_6_ItemDetailPage;
+                xamlType = userType;
+                break;
+
+            case "GamePedia.Common.BooleanToVisibilityConverter":
+                userType = new XamlUserType(this, typeName, typeof(GamePedia.Common.BooleanToVisibilityConverter), GetXamlTypeByName("Object"));
+                userType.Activator = Activate_7_BooleanToVisibilityConverter;
+                xamlType = userType;
+                break;
+
+            case "GamePedia.SearchPage":
+                userType = new XamlUserType(this, typeName, typeof(GamePedia.SearchPage), GetXamlTypeByName("GamePedia.Common.LayoutAwarePage"));
+                userType.Activator = Activate_8_SearchPage;
                 xamlType = userType;
                 break;
 

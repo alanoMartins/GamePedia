@@ -1,1 +1,1 @@
-C:\Users\Kleber\Documents\GitHub\GamePedia\GamePedia\GamePedia.csproj;neutral
+C:\Users\MIC11\Documents\GitHub\GamePedia\GamePedia\GamePedia.csproj;neutral
