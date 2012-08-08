@@ -59,6 +59,12 @@ namespace GamePedia.Data
             }
         }
 
+        public static IEnumerable<GamePediaDataGroup> GetGroups(string uniqueId)
+        {
+            if (!uniqueId.Equals("AllGroups")) throw new ArgumentException("Only 'AllGroups' is supported as a collection of groups");
+            return _GamePediaDataSource._allGroups;
+        }
+
         public ObservableCollection<GamePediaDataGroupBase> AllProducers
         {
             get
