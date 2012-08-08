@@ -15,6 +15,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.ApplicationModel.Search;
+using GamePedia.Data;
+using GamePedia.DataModel;
+
 
 // The Grid App template is documented at http://go.microsoft.com/fwlink/?LinkId=234226
 
@@ -51,6 +55,8 @@ namespace GamePedia
                 return;
             }
 
+            SearchPane.GetForCurrentView().SuggestionsRequested += App_SuggestionsRequested;
+
             // Create a Frame to act as the navigation context and associate it with
             // a SuspensionManager key
             var rootFrame = new Frame();
@@ -78,6 +84,18 @@ namespace GamePedia
             Window.Current.Activate();
         }
 
+        private void App_SuggestionsRequested(SearchPane sender, SearchPaneSuggestionsRequestedEventArgs args)
+        {
+            string query = args.QueryText.ToLower();
+            var allQuery = GamePediaDataSource.GetGroups("AllGroups");
+
+            foreach (var group in allQuery)
+            {
+                if (group.Title.ToLower().StartsWith(query))
+                    args.Request.SearchSuggestionCollection.AppendQuerySuggestion(group.Title);
+            }
+        }
+
         /// <summary>
         /// Invoked when application execution is being suspended.  Application state is saved
         /// without knowing whether the application will be terminated or resumed with the contents
@@ -90,6 +108,30 @@ namespace GamePedia
             var deferral = e.SuspendingOperation.GetDeferral();
             await SuspensionManager.SaveAsync();
             deferral.Complete();
+        }
+
+        /// <summary>
+        /// Invoked when the application is activated to display search results.
+        /// </summary>
+        /// <param name="args">Details about the activation request.</param>
+        protected async override void OnSearchActivated(Windows.ApplicationModel.Activation.SearchActivatedEventArgs args)
+        {
+            if (args.PreviousExecutionState == ApplicationExecutionState.NotRunning ||
+                args.PreviousExecutionState == ApplicationExecutionState.ClosedByUser ||
+                args.PreviousExecutionState == ApplicationExecutionState.Terminated)
+            { 
+                //Carrega item data
+
+                //await GamePediaDataSource.LoadLocalDataAsync();
+
+                //Registra handler para App_SuggestionsRequested
+
+                SearchPane.GetForCurrentView().SuggestionsRequested += App_SuggestionsRequested;
+                //SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
+
+                //Window.Current.Content = rootFrame;
+            }
+            GamePedia.SearchPage.Activate(args.QueryText, args.PreviousExecutionState);
         }
     }
 }
