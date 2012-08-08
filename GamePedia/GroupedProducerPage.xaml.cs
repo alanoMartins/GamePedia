@@ -23,9 +23,9 @@ namespace GamePedia
     /// A page that displays an overview of a single group, including a preview of the items
     /// within the group.
     /// </summary>
-    public sealed partial class GroupPage : GamePedia.Common.LayoutAwarePage
+    public sealed partial class GroupedProducerPage : GamePedia.Common.LayoutAwarePage
     {
-        public GroupPage()
+        public GroupedProducerPage()
         {
             this.InitializeComponent();
         }
@@ -44,7 +44,7 @@ namespace GamePedia
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
             var group = GamePediaDataSource.GetProducter((String)navigationParameter);
             this.DefaultViewModel["Group"] = group;
-            this.DefaultViewModel["Items"] = group.Consoles;
+            this.DefaultViewModel["Items"] = group.Groups;
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace GamePedia
         {
             // Navigate to the appropriate destination page, configuring the new page
             // by passing required information as a navigation parameter
-            var itemId = ((GamePediaDataConsole)e.ClickedItem).UniqueId;
+            var itemId = ((GamePediaDataGroup)e.ClickedItem).UniqueId;
             this.Frame.Navigate(typeof(GroupDetailPage), itemId);
         }
     }

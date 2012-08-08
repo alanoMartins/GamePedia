@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GamePedia.Data;
+using Windows.UI.Xaml.Data;
 
 namespace GamePedia.DataModel
 {
@@ -25,6 +26,21 @@ namespace GamePedia.DataModel
         public IEnumerable<GamePediaDataItem> TopItens
         {
             get { return this._itens.Take(12); }
+        }
+    }
+
+    public class DataGenreConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            var genres = (IEnumerable<GamePediaDataGenre>)value;
+            string result = string.Format("{0}", string.Join(Environment.NewLine, genres.Select(x => x.Title)));
+            return result;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
         }
     }
 }

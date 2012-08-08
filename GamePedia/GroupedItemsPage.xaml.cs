@@ -41,8 +41,8 @@ namespace GamePedia
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
-            var sampleDataGroups = GamePediaDataSource.GetProducers((String)navigationParameter);
-            this.DefaultViewModel["Groups"] = sampleDataGroups;
+            var producersAndGenres = GamePediaDataSource.GetProducers((String)navigationParameter);
+            this.DefaultViewModel["Groups"] = producersAndGenres;
 
             //var genreDataGroup = GamePediaDataSource.GetGenres((String)navigationParameter);
             //this.DefaultViewModel["GroupGenre"] = genreDataGroup;
@@ -60,7 +60,7 @@ namespace GamePedia
 
             // Navigate to the appropriate destination page, configuring the new page
             // by passing required information as a navigation parameter
-            this.Frame.Navigate(typeof(GroupPage), ((GamePediaDataGroup)group).UniqueId);
+            this.Frame.Navigate(typeof(GroupedProducerPage), ((GamePediaDataGroup)group).UniqueId);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace GamePedia
         {
             // Navigate to the appropriate destination page, configuring the new page
             // by passing required information as a navigation parameter
-            var itemId = ((GamePediaDataConsole)e.ClickedItem).UniqueId;
+            var itemId = ((GamePediaDataGroup)e.ClickedItem).UniqueId;
             this.Frame.Navigate(typeof(GroupDetailPage), itemId);
         }
     }

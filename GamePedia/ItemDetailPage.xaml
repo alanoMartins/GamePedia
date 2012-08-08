@@ -8,12 +8,14 @@
     xmlns:local="using:GamePedia"
     xmlns:data="using:GamePedia.Data"
     xmlns:common="using:GamePedia.Common"
+    xmlns:datamodel="using:GamePedia.DataModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Page.Resources>
-
+        <datamodel:DataGenreConverter x:Key="DataGenreConverter" />
+        <datamodel:DataConsoleConverter x:Key="DataConsoleConverter" />
         <!-- Collection of items displayed by this page -->
         <CollectionViewSource
             x:Name="itemsViewSource"
@@ -71,35 +73,42 @@
                         <ScrollViewer x:Name="scrollViewer" Style="{StaticResource HorizontalScrollViewerStyle}" Grid.Row="1">
 
                             <!-- Content is allowed to flow across as many columns as needed -->
-                            <common:RichTextColumns x:Name="richTextColumns" Margin="117,0,117,47">
-                                <RichTextBlock x:Name="richTextBlock" Width="560" Style="{StaticResource ItemRichTextStyle}">
-                                    <Paragraph>
-                                        <Run FontSize="26.667" FontWeight="Light" Text="{Binding Title}"/>
-                                        <LineBreak/>
-                                        <LineBreak/>
-                                        <Run FontWeight="SemiBold" Text="{Binding Subtitle}"/>
-                                    </Paragraph>
-                                    <Paragraph LineStackingStrategy="MaxHeight">
-                                        <InlineUIContainer>
-                                            <Image x:Name="image" MaxHeight="480" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding Image}"/>
-                                        </InlineUIContainer>
-                                    </Paragraph>
-                                    <Paragraph>
-                                        <Run FontWeight="SemiLight" Text="{Binding Content}"/>
-                                    </Paragraph>
-                                </RichTextBlock>
+                            <Grid Margin="120,0,20,20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="400" />
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition Width="360" />
+                                    <ColumnDefinition Width="40" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
 
-                                <!-- Additional columns are created from this template -->
-                                <common:RichTextColumns.ColumnTemplate>
-                                    <DataTemplate>
-                                        <RichTextBlockOverflow Width="560" Margin="80,0,0,0">
-                                            <RichTextBlockOverflow.RenderTransform>
-                                                <TranslateTransform X="-1" Y="4"/>
-                                            </RichTextBlockOverflow.RenderTransform>
-                                        </RichTextBlockOverflow>
-                                    </DataTemplate>
-                                </common:RichTextColumns.ColumnTemplate>
-                            </common:RichTextColumns>
+                                <StackPanel Orientation="Vertical" Grid.Column="0">
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap"/>
+                                    <Image x:Name="image" Width="400" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding Image}"/>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock FontSize="26.667" FontWeight="Light" Text="Sobre o jogo: "/>
+                                        <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Description}" Margin="0,0,0,8" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Vertical" Grid.Column="2">
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Gêneros" Margin="0,0,0,16"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopGenres, Converter={StaticResource DataGenreConverter}}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Consoles" Margin="0,20,0,16"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopConsoles, Converter={StaticResource DataConsoleConverter}}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Proprietário" Margin="0,20,0,16"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" />
+                                </StackPanel>
+
+                                <StackPanel Orientation="Vertical" Grid.Column="4">
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Informações" Margin="0,0,0,16"/>
+                                    <ScrollViewer Style="{StaticResource VerticalScrollViewerStyle}">
+                                        <Grid>
+                                            <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Content}" TextWrapping="Wrap" />
+                                        </Grid>
+                                    </ScrollViewer>
+                                </StackPanel>
+                            </Grid>
 
                             <VisualStateManager.VisualStateGroups>
 
@@ -111,9 +120,6 @@
                                     <!-- Respect the narrower 100-pixel margin convention for portrait -->
                                     <VisualState x:Name="FullScreenPortrait">
                                         <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="richTextColumns" Storyboard.TargetProperty="Margin">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="97,0,87,57"/>
-                                            </ObjectAnimationUsingKeyFrames>
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="image" Storyboard.TargetProperty="MaxHeight">
                                                 <DiscreteObjectKeyFrame KeyTime="0" Value="400"/>
                                             </ObjectAnimationUsingKeyFrames>
@@ -123,14 +129,8 @@
                                     <!-- When snapped, the content is reformatted and scrolls vertically -->
                                     <VisualState x:Name="Snapped">
                                         <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="richTextColumns" Storyboard.TargetProperty="Margin">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="17,0,17,57"/>
-                                            </ObjectAnimationUsingKeyFrames>
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="scrollViewer" Storyboard.TargetProperty="Style">
                                                 <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource VerticalScrollViewerStyle}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="richTextBlock" Storyboard.TargetProperty="Width">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="280"/>
                                             </ObjectAnimationUsingKeyFrames>
                                             <ObjectAnimationUsingKeyFrames Storyboard.TargetName="image" Storyboard.TargetProperty="MaxHeight">
                                                 <DiscreteObjectKeyFrame KeyTime="0" Value="160"/>

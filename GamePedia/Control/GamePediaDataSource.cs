@@ -25,7 +25,7 @@ namespace GamePedia.Data
     {
         Genre,
         Console,
-        Producer,
+        GroupBase,
     }
 
     /// <summary>
@@ -59,12 +59,12 @@ namespace GamePedia.Data
             }
         }
 
-        public ObservableCollection<GamePediaDataProducer> AllProducers
+        public ObservableCollection<GamePediaDataGroupBase> AllProducers
         {
             get
             {
-                var producers = this._allGroups.Where(x => x is GamePediaDataProducer).Cast<GamePediaDataProducer>();
-                return new ObservableCollection<GamePediaDataProducer>(producers);
+                var producers = this._allGroups.Where(x => x is GamePediaDataGroupBase).Cast<GamePediaDataGroupBase>();
+                return new ObservableCollection<GamePediaDataGroupBase>(producers);
             }
         }
 
@@ -85,12 +85,12 @@ namespace GamePedia.Data
             return _GamePediaDataSource.AllConsoles.FirstOrDefault(x => x.UniqueId == uniqueId);
         }
 
-        public static GamePediaDataProducer GetProducter(string uniqueId)
+        public static GamePediaDataGroupBase GetProducter(string uniqueId)
         {
             return _GamePediaDataSource.AllProducers.FirstOrDefault(x => x.UniqueId == uniqueId);
         }
 
-        public static IEnumerable<GamePediaDataProducer> GetProducers(string uniqueId)
+        public static IEnumerable<GamePediaDataGroupBase> GetProducers(string uniqueId)
         {
             if (!uniqueId.Equals("AllGroups")) throw new ArgumentException("Only 'AllGroups' is supported as a collection of groups");
 
@@ -117,7 +117,7 @@ namespace GamePedia.Data
             String ITEM_CONTENT = String.Format("Item Content: {0}\n\n{0}\n\n{0}\n\n{0}\n\n{0}\n\n{0}\n\n{0}",
                         "Curabitur class aliquam vestibulum nam curae maecenas sed integer cras phasellus suspendisse quisque donec dis praesent accumsan bibendum pellentesque condimentum adipiscing etiam consequat vivamus dictumst aliquam duis convallis scelerisque est parturient ullamcorper aliquet fusce suspendisse nunc hac eleifend amet blandit facilisi condimentum commodo scelerisque faucibus aenean ullamcorper ante mauris dignissim consectetuer nullam lorem vestibulum habitant conubia elementum pellentesque morbi facilisis arcu sollicitudin diam cubilia aptent vestibulum auctor eget dapibus pellentesque inceptos leo egestas interdum nulla consectetuer suspendisse adipiscing pellentesque proin lobortis sollicitudin augue elit mus congue fermentum parturient fringilla euismod feugiat");
 
-            var sony = new GamePediaDataProducer(Guid.NewGuid().ToString(),
+            var sony = new GamePediaDataGroupBase(Guid.NewGuid().ToString(),
                 "Sony", "Assets/Producer/sony(1).jpg", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante", "Sony Content");
 
 
@@ -135,11 +135,11 @@ namespace GamePedia.Data
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
 
 
-            sony.Consoles.Add(playStation3);
-            sony.Consoles.Add(playStation2);
-            sony.Consoles.Add(playStation);
+            sony.Groups.Add(playStation3);
+            sony.Groups.Add(playStation2);
+            sony.Groups.Add(playStation);
 
-            var microsoft = new GamePediaDataProducer(Guid.NewGuid().ToString(),
+            var microsoft = new GamePediaDataGroupBase(Guid.NewGuid().ToString(),
                 "Microsoft", "Assets/Producer/microsoft.jpg", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante", "Microsoft Content");
 
             var xBox360 = new GamePediaDataConsole(Guid.NewGuid().ToString(),
@@ -147,28 +147,38 @@ namespace GamePedia.Data
                     "Assets/Console/xbox360(1).jpg",
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
 
-            microsoft.Consoles.Add(xBox360);
+            microsoft.Groups.Add(xBox360);
+
+            var genres = new GamePediaDataGroupBase(Guid.NewGuid().ToString(),
+                "Gêneros", "Assets/Genre/genres.png", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante", "Microsoft Content");
+
 
             var action = new GamePediaDataGenre(
                 Guid.NewGuid().ToString(),
-                "Action", 
-                "Assets/DarkGray.png", 
+                "Action",
+                "Assets/Genre/action.png",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
             var adventure = new GamePediaDataGenre(
                 Guid.NewGuid().ToString(),
                 "Adventure",
-                "Assets/DarkGray.png",
+                "Assets/Genre/adventure.png",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
             var rpg = new GamePediaDataGenre(
                 Guid.NewGuid().ToString(),
                 "RPG",
-                "Assets/DarkGray.png",
+                "Assets/Genre/rpg.png",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
             var race = new GamePediaDataGenre(
                 Guid.NewGuid().ToString(),
                 "Race",
-                "Assets/DarkGray.png",
+                "Assets/Genre/race.png",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
+
+            genres.Groups.Add(action);
+            genres.Groups.Add(adventure);
+            genres.Groups.Add(rpg);
+            genres.Groups.Add(race);
+
 
             var gow3 = new GamePediaDataItem(Guid.NewGuid().ToString(),
                     "God of War 3",
@@ -197,6 +207,7 @@ namespace GamePedia.Data
 
             this.AllGroups.Add(sony);
             this.AllGroups.Add(microsoft);
+            this.AllGroups.Add(genres);
             this.AllGroups.Add(action);
             this.AllGroups.Add(adventure);
             this.AllGroups.Add(rpg);

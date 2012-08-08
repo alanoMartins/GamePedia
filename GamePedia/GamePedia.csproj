@@ -101,18 +101,18 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Folder Include="Assets\Genre\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\DataItemParameters.cs" />
     <Compile Include="DataModel\GamePediaDataCommon.cs" />
     <Compile Include="DataModel\GamePediaDataConsole.cs" />
     <Compile Include="DataModel\GamePediaDataGenre.cs" />
     <Compile Include="DataModel\GamePediaDataGroup.cs" />
     <Compile Include="DataModel\GamePediaDataItem.cs" />
-    <Compile Include="DataModel\GamePediaDataProducer.cs" />
+    <Compile Include="DataModel\GamePediaDataGroupBase.cs" />
     <Compile Include="GroupedProducerPage.xaml.cs">
       <DependentUpon>GroupedProducerPage.xaml</DependentUpon>
     </Compile>
@@ -133,9 +133,6 @@
     <Compile Include="Common\LayoutAwarePage.cs" />
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
-    <Compile Include="SplitGenrePage.xaml.cs">
-      <DependentUpon>SplitGenrePage.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -145,6 +142,11 @@
     <None Include="GamePedia_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Genre\action.png" />
+    <Content Include="Assets\Genre\adventure.png" />
+    <Content Include="Assets\Genre\genres.png" />
+    <Content Include="Assets\Genre\race.png" />
+    <Content Include="Assets\Genre\rpg.png" />
     <Content Include="Assets\Item\gow3%284%29.jpg" />
     <Content Include="Assets\Console\play1%281%29.jpg" />
     <Content Include="Assets\Console\play2%281%29.jpg" />
@@ -194,10 +196,6 @@
     <Page Include="ItemDetailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="SplitGenrePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">

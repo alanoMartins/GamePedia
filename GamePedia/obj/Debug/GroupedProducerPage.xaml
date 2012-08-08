@@ -1,6 +1,6 @@
 ﻿<common:LayoutAwarePage
     x:Name="pageRoot"
-    x:Class="GamePedia.GroupPage"
+    x:Class="GamePedia.GroupedProducerPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
     IsTabStop="false"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
@@ -18,7 +18,7 @@
         <CollectionViewSource
             x:Name="itemsViewSource"
             Source="{Binding Items}"
-            d:Source="{Binding AllConsoles[0].Items, Source={d:DesignInstance Type=data:GamePediaDataSource, IsDesignTimeCreatable=True}}"/>
+            d:Source="{Binding AllConsoles, Source={d:DesignInstance Type=data:GamePediaDataSource, IsDesignTimeCreatable=True}}"/>
     </Page.Resources>
 
     <!--
@@ -63,7 +63,6 @@
 
             <GridView.Header>
                 <StackPanel Width="480" Margin="0,4,14,0">
-                    <TextBlock Text="{Binding Subtitle}" Margin="0,0,18,20" Style="{StaticResource SubheaderTextStyle}" MaxHeight="60"/>
                     <Image Source="{Binding Image}" Height="400" Margin="0,0,18,20" Stretch="UniformToFill"/>
                     <TextBlock Text="{Binding Description}" Margin="0,0,18,0" Style="{StaticResource BodyTextStyle}"/>
                 </StackPanel>
@@ -92,7 +91,6 @@
 
             <ListView.Header>
                 <StackPanel>
-                    <TextBlock Text="{Binding Subtitle}" Margin="20,0,18,20" Style="{StaticResource TitleTextStyle}" MaxHeight="60"/>
                     <Image Source="{Binding Image}" Margin="20,0,18,0" MaxHeight="160" Stretch="UniformToFill"/>
                     <TextBlock Margin="20,20,18,30" Text="{Binding Description}" Style="{StaticResource BodyTextStyle}"/>
                 </StackPanel>

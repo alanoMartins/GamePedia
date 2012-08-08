@@ -41,7 +41,7 @@ namespace GamePedia.DataModel
             //
             // A maximum of 12 items are displayed because it results in filled grid columns
             // whether there are 1, 2, 3, 4, or 6 rows displayed
-            get { return this._items.Take(12); }
+            get { return this._items.Distinct().Take(12); }
         }
     }
 }

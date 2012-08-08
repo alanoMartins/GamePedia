@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using GamePedia.DataModel;
+using GamePedia.Common;
 
 // The Group Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234229
 
@@ -25,6 +26,8 @@ namespace GamePedia
     /// </summary>
     public sealed partial class GroupDetailPage : GamePedia.Common.LayoutAwarePage
     {
+        private GamePediaDataGroup group = null;
+
         public GroupDetailPage()
         {
             this.InitializeComponent();
@@ -42,9 +45,9 @@ namespace GamePedia
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
-            var group = GamePediaDataSource.GetGroup((String)navigationParameter);
-            this.DefaultViewModel["Group"] = group;
-            this.DefaultViewModel["Items"] = group.Items;
+            this.group = GamePediaDataSource.GetGroup((String)navigationParameter);
+            this.DefaultViewModel["Group"] = this.group;
+            this.DefaultViewModel["Items"] = this.group.Items.Distinct();
         }
 
         /// <summary>
@@ -58,7 +61,8 @@ namespace GamePedia
             // Navigate to the appropriate destination page, configuring the new page
             // by passing required information as a navigation parameter
             var itemId = ((GamePediaDataItem)e.ClickedItem).UniqueId;
-            this.Frame.Navigate(typeof(ItemDetailPage), itemId);
+            var parameter = new DataItemParameters() { ItemID = itemId, GroupID = this.group.UniqueId };
+            this.Frame.Navigate(typeof(ItemDetailPage), parameter);
         }
     }
 }

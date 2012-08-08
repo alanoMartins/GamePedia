@@ -13,7 +13,7 @@ namespace GamePedia.DataModel
     /// </summary>
     public class GamePediaDataItem : GamePediaDataCommon
     {
-        public GamePediaDataItem(String uniqueId, String title, String imagePath, String description, String content, GamePediaDataProducer producer, params GamePediaDataGroup[] groups)
+        public GamePediaDataItem(String uniqueId, String title, String imagePath, String description, String content, GamePediaDataGroupBase producer, params GamePediaDataGroup[] groups)
             : base(uniqueId, title, imagePath, description)
         {
             this._content = content;
@@ -26,8 +26,8 @@ namespace GamePedia.DataModel
             }
         }
 
-        private GamePediaDataProducer _producer;
-        public GamePediaDataProducer Producer
+        private GamePediaDataGroupBase _producer;
+        public GamePediaDataGroupBase Producer
         {
             get { return _producer; }
             set { _producer = value; }

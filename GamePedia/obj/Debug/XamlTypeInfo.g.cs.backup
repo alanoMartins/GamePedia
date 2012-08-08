@@ -118,17 +118,19 @@ namespace GamePedia.GamePedia_XamlTypeInfo
 
         private object Activate_0_LayoutAwarePage() { return new GamePedia.Common.LayoutAwarePage(); }
 
-        private object Activate_1_GroupPage() { return new GamePedia.GroupPage(); }
+        private object Activate_1_GroupedProducerPage() { return new GamePedia.GroupedProducerPage(); }
 
         private object Activate_2_GroupedItemsPage() { return new GamePedia.GroupedItemsPage(); }
 
         private object Activate_3_GroupDetailPage() { return new GamePedia.GroupDetailPage(); }
 
-        private object Activate_4_RichTextColumns() { return new GamePedia.Common.RichTextColumns(); }
+        private object Activate_4_DataGenreConverter() { return new GamePedia.DataModel.DataGenreConverter(); }
 
-        private object Activate_5_ItemDetailPage() { return new GamePedia.ItemDetailPage(); }
+        private object Activate_5_DataConsoleConverter() { return new GamePedia.DataModel.DataConsoleConverter(); }
 
-        private object Activate_6_SplitGenrePage() { return new GamePedia.SplitGenrePage(); }
+        private object Activate_6_ItemDetailPage() { return new GamePedia.ItemDetailPage(); }
+
+        private object Activate_7_SplitGenrePage() { return new GamePedia.SplitGenrePage(); }
 
 
         private IXamlType CreateXamlType(string typeName)
@@ -146,16 +148,8 @@ namespace GamePedia.GamePedia_XamlTypeInfo
                 xamlType = new XamlSystemBaseType(typeName, typeof(Windows.UI.Xaml.Controls.UserControl));
                 break;
 
-            case "Windows.UI.Xaml.Controls.Panel":
-                xamlType = new XamlSystemBaseType(typeName, typeof(Windows.UI.Xaml.Controls.Panel));
-                break;
-
-            case "Windows.UI.Xaml.Controls.RichTextBlock":
-                xamlType = new XamlSystemBaseType(typeName, typeof(Windows.UI.Xaml.Controls.RichTextBlock));
-                break;
-
-            case "Windows.UI.Xaml.DataTemplate":
-                xamlType = new XamlSystemBaseType(typeName, typeof(Windows.UI.Xaml.DataTemplate));
+            case "Object":
+                xamlType = new XamlSystemBaseType(typeName, typeof(System.Object));
                 break;
 
             case "GamePedia.Common.LayoutAwarePage":
@@ -164,9 +158,9 @@ namespace GamePedia.GamePedia_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case "GamePedia.GroupPage":
-                userType = new XamlUserType(this, typeName, typeof(GamePedia.GroupPage), GetXamlTypeByName("GamePedia.Common.LayoutAwarePage"));
-                userType.Activator = Activate_1_GroupPage;
+            case "GamePedia.GroupedProducerPage":
+                userType = new XamlUserType(this, typeName, typeof(GamePedia.GroupedProducerPage), GetXamlTypeByName("GamePedia.Common.LayoutAwarePage"));
+                userType.Activator = Activate_1_GroupedProducerPage;
                 xamlType = userType;
                 break;
 
@@ -182,24 +176,27 @@ namespace GamePedia.GamePedia_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case "GamePedia.Common.RichTextColumns":
-                userType = new XamlUserType(this, typeName, typeof(GamePedia.Common.RichTextColumns), GetXamlTypeByName("Windows.UI.Xaml.Controls.Panel"));
-                userType.Activator = Activate_4_RichTextColumns;
-                userType.SetContentPropertyName("GamePedia.Common.RichTextColumns.RichTextContent");
-                userType.AddMemberName("RichTextContent");
-                userType.AddMemberName("ColumnTemplate");
+            case "GamePedia.DataModel.DataGenreConverter":
+                userType = new XamlUserType(this, typeName, typeof(GamePedia.DataModel.DataGenreConverter), GetXamlTypeByName("Object"));
+                userType.Activator = Activate_4_DataGenreConverter;
+                xamlType = userType;
+                break;
+
+            case "GamePedia.DataModel.DataConsoleConverter":
+                userType = new XamlUserType(this, typeName, typeof(GamePedia.DataModel.DataConsoleConverter), GetXamlTypeByName("Object"));
+                userType.Activator = Activate_5_DataConsoleConverter;
                 xamlType = userType;
                 break;
 
             case "GamePedia.ItemDetailPage":
                 userType = new XamlUserType(this, typeName, typeof(GamePedia.ItemDetailPage), GetXamlTypeByName("GamePedia.Common.LayoutAwarePage"));
-                userType.Activator = Activate_5_ItemDetailPage;
+                userType.Activator = Activate_6_ItemDetailPage;
                 xamlType = userType;
                 break;
 
             case "GamePedia.SplitGenrePage":
                 userType = new XamlUserType(this, typeName, typeof(GamePedia.SplitGenrePage), GetXamlTypeByName("GamePedia.Common.LayoutAwarePage"));
-                userType.Activator = Activate_6_SplitGenrePage;
+                userType.Activator = Activate_7_SplitGenrePage;
                 xamlType = userType;
                 break;
 
@@ -208,49 +205,11 @@ namespace GamePedia.GamePedia_XamlTypeInfo
         }
 
 
-        private object get_0_RichTextColumns_RichTextContent(object instance)
-        {
-            var that = (GamePedia.Common.RichTextColumns)instance;
-            return that.RichTextContent;
-        }
-        private void set_0_RichTextColumns_RichTextContent(object instance, object Value)
-        {
-            var that = (GamePedia.Common.RichTextColumns)instance;
-            that.RichTextContent = (Windows.UI.Xaml.Controls.RichTextBlock)Value;
-        }
-        private object get_1_RichTextColumns_ColumnTemplate(object instance)
-        {
-            var that = (GamePedia.Common.RichTextColumns)instance;
-            return that.ColumnTemplate;
-        }
-        private void set_1_RichTextColumns_ColumnTemplate(object instance, object Value)
-        {
-            var that = (GamePedia.Common.RichTextColumns)instance;
-            that.ColumnTemplate = (Windows.UI.Xaml.DataTemplate)Value;
-        }
 
         private IXamlMember CreateXamlMember(string longMemberName)
         {
             XamlMember xamlMember = null;
-            XamlUserType userType;
-
-            switch (longMemberName)
-            {
-            case "GamePedia.Common.RichTextColumns.RichTextContent":
-                userType = (XamlUserType)GetXamlTypeByName("GamePedia.Common.RichTextColumns");
-                xamlMember = new XamlMember(this, "RichTextContent", "Windows.UI.Xaml.Controls.RichTextBlock");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_0_RichTextColumns_RichTextContent;
-                xamlMember.Setter = set_0_RichTextColumns_RichTextContent;
-                break;
-            case "GamePedia.Common.RichTextColumns.ColumnTemplate":
-                userType = (XamlUserType)GetXamlTypeByName("GamePedia.Common.RichTextColumns");
-                xamlMember = new XamlMember(this, "ColumnTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_1_RichTextColumns_ColumnTemplate;
-                xamlMember.Setter = set_1_RichTextColumns_ColumnTemplate;
-                break;
-            }
+            // No Local Properties
             return xamlMember;
         }
 

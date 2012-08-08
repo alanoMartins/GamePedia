@@ -22,7 +22,7 @@
             x:Name="groupedItemsViewSource"
             Source="{Binding Groups}"
             IsSourceGrouped="true"
-            ItemsPath="TopConsoles"
+            ItemsPath="TopGroups"
             d:Source="{Binding AllGroups, Source={d:DesignInstance Type=data:GamePediaDataSource, IsDesignTimeCreatable=True}}"/>
         
         <!--<CollectionViewSource

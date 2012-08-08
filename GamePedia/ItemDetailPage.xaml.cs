@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using GamePedia.DataModel;
+using GamePedia.Common;
 
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
 
@@ -25,6 +26,7 @@ namespace GamePedia
     /// </summary>
     public sealed partial class ItemDetailPage : GamePedia.Common.LayoutAwarePage
     {
+        private DataItemParameters parameters = null;
         public ItemDetailPage()
         {
             this.InitializeComponent();
@@ -46,11 +48,12 @@ namespace GamePedia
             {
                 navigationParameter = pageState["SelectedItem"];
             }
-
+            this.parameters = (DataItemParameters)navigationParameter;
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
-            var item = GamePediaDataSource.GetItem((String)navigationParameter);
-            this.DefaultViewModel["Group"] = item.Groups;
-            this.DefaultViewModel["Items"] = item.Groups.SelectMany(x => x.Items);
+            var item = GamePediaDataSource.GetItem(this.parameters.ItemID);
+            var group = GamePediaDataSource.GetGroup(this.parameters.GroupID);
+            this.DefaultViewModel["Group"] = group;
+            this.DefaultViewModel["Items"] = group.Items.Distinct();
             this.flipView.SelectedItem = item;
         }
 
@@ -63,7 +66,8 @@ namespace GamePedia
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
             var selectedItem = (GamePediaDataItem)this.flipView.SelectedItem;
-            pageState["SelectedItem"] = selectedItem.UniqueId;
+            this.parameters.ItemID = selectedItem.UniqueId;
+            pageState["SelectedItem"] = this.parameters;
         }
     }
 }

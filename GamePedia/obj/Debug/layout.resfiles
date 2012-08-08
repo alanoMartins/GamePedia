@@ -8,6 +8,11 @@ Assets\Console\xbox.jpg
 Assets\Console\xbox360(1).jpg
 Assets\Console\xbox360.jpg
 Assets\DarkGray.png
+Assets\Genre\action.png
+Assets\Genre\adventure.png
+Assets\Genre\genres.png
+Assets\Genre\race.png
+Assets\Genre\rpg.png
 Assets\Item\AsuraItem.png
 Assets\Item\ffIX.jpg
 Assets\Item\gow3(3).jpg
@@ -28,4 +33,3 @@ GroupDetailPage.xaml
 GroupedItemsPage.xaml
 GroupedProducerPage.xaml
 ItemDetailPage.xaml
-SplitGenrePage.xaml
