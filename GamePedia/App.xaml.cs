@@ -18,6 +18,10 @@ using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.Search;
 using GamePedia.Data;
 using GamePedia.DataModel;
+using Windows.UI.ApplicationSettings;
+using Callisto.Controls;
+using Windows.UI;
+
 
 
 // The Grid App template is documented at http://go.microsoft.com/fwlink/?LinkId=234226
@@ -29,6 +33,7 @@ namespace GamePedia
     /// </summary>
     sealed partial class App : Application
     {
+        private Color _background = Color.FromArgb(255, 0, 77, 96);
         /// <summary>
         /// Initializes the singleton Application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -62,6 +67,8 @@ namespace GamePedia
             var rootFrame = new Frame();
             SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
 
+            SettingsPane.GetForCurrentView().CommandsRequested += OnCommandRequested;
+
             if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
             {
                 // Restore the saved session state only when appropriate
@@ -83,6 +90,7 @@ namespace GamePedia
             Window.Current.Content = rootFrame;
             Window.Current.Activate();
         }
+        
 
         private void App_SuggestionsRequested(SearchPane sender, SearchPaneSuggestionsRequestedEventArgs args)
         {
@@ -130,6 +138,7 @@ namespace GamePedia
                 //Registra handler para App_SuggestionsRequested
 
                 SearchPane.GetForCurrentView().SuggestionsRequested += App_SuggestionsRequested;
+                SettingsPane.GetForCurrentView().CommandsRequested += OnCommandRequested;
                 //SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
 
                 //Window.Current.Content = rootFrame;
@@ -145,6 +154,23 @@ namespace GamePedia
         {
             var shareTargetPage = new GamePedia.SharePage();
             shareTargetPage.Activate(args);
+        }
+
+        private void OnCommandRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs args)
+        {
+            // Add an About command
+            var about = new SettingsCommand("about", "About", (handler) =>
+            {
+                var settings = new SettingsFlyout();
+                settings.Content = new AboutPage();
+                settings.HeaderBrush = new SolidColorBrush(_background);
+                settings.Background = new SolidColorBrush(_background);
+                settings.HeaderText = "About";
+                settings.IsOpen = true;
+            });
+
+            args.Request.ApplicationCommands.Add(about);
+
         }
     }
 }
