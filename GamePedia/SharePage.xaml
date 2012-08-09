@@ -24,6 +24,9 @@
         * Row 2 contains the standard share target footer
     -->
     <Grid Style="{StaticResource LayoutRootStyle}">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/background.png" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Grid Margin="40,20,40,60">
             <Grid.RowDefinitions>
                 <RowDefinition Height="180"/>

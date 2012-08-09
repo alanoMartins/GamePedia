@@ -30,6 +30,9 @@
         Style="{StaticResource LayoutRootStyle}"
         DataContext="{Binding Group}"
         d:DataContext="{Binding AllGroups[0], Source={d:DesignInstance Type=data:GamePediaDataSource, IsDesignTimeCreatable=True}}">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/background.png"/>
+        </Grid.Background>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>

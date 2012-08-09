@@ -78,5 +78,10 @@ namespace GamePedia
             var itemId = ((GamePediaDataGroup)e.ClickedItem).UniqueId;
             this.Frame.Navigate(typeof(GroupDetailPage), itemId);
         }
+
+        private void ZoomOut_Click(object sender, ItemClickEventArgs e)
+        {
+            this.Header_Click(sender, new RoutedEventArgs());
+        }
     }
 }

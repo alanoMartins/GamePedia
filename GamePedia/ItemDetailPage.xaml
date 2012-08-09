@@ -32,6 +32,9 @@
         Style="{StaticResource LayoutRootStyle}"
         DataContext="{Binding Group}"
         d:DataContext="{Binding AllGroups[0], Source={d:DesignInstance Type=data:GamePediaDataSource, IsDesignTimeCreatable=True}}">
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/background.png"/>
+        </Grid.Background>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
@@ -78,28 +81,28 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel Orientation="Vertical" Grid.Column="0">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap"/>
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" Style="{StaticResource HeaderTextStyle}" TextWrapping="Wrap"/>
                                     <Image x:Name="image" Width="400" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding Image}"/>
                                     <StackPanel Orientation="Vertical">
-                                        <TextBlock FontSize="26.667" FontWeight="Light" Text="Sobre o jogo: "/>
-                                        <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Description}" Margin="0,10,0,8" TextWrapping="Wrap" />
+                                        <TextBlock FontSize="26.667" FontWeight="Light" Text="Sobre o jogo: " Style="{StaticResource BaselineTextStyle}" />
+                                        <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Description}" Margin="0,10,0,8" TextWrapping="Wrap" Style="{StaticResource BaselineTextStyle}" />
                                     </StackPanel>
                                 </StackPanel>
 
                                 <StackPanel Orientation="Vertical" Grid.Column="2">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Gêneros" Margin="0,0,0,16"/>
-                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopGenres, Converter={StaticResource DataGenreConverter}}" />
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Consoles" Margin="0,20,0,16"/>
-                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopConsoles, Converter={StaticResource DataConsoleConverter}}" />
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Proprietário" Margin="0,20,0,16"/>
-                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" Margin="0,0,0,30" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Gêneros" Margin="0,0,0,16" Style="{StaticResource HeaderTextStyle}" />
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopGenres, Converter={StaticResource DataGenreConverter}}" Style="{StaticResource BaselineTextStyle}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Consoles" Margin="0,20,0,16" Style="{StaticResource HeaderTextStyle}" />
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopConsoles, Converter={StaticResource DataConsoleConverter}}" Style="{StaticResource BaselineTextStyle}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Proprietário" Margin="0,20,0,16" Style="{StaticResource HeaderTextStyle}" />
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" Margin="0,0,0,30" Style="{StaticResource BaselineTextStyle}" />
                                 </StackPanel>
 
                                 <StackPanel Orientation="Vertical" Grid.Column="4">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Informações" Margin="0,0,0,16"/>
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Informações" Margin="0,0,0,16" Style="{StaticResource HeaderTextStyle}"/>
                                     <ScrollViewer Style="{StaticResource VerticalScrollViewerStyle}">
                                         <Grid>
-                                            <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Content}" TextWrapping="Wrap" />
+                                            <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Content}" TextWrapping="Wrap" Style="{StaticResource BaselineTextStyle}" />
                                         </Grid>
                                     </ScrollViewer>
                                 </StackPanel>
@@ -157,24 +160,24 @@
                             <!-- Vertical StackPanel for item-detail layout -->
                             <StackPanel Orientation="Vertical" Margin="100,0,20,0">
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap"/>
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource HeaderTextStyle}"/>
                                     <Image x:Name="image" Width="400" Margin="0,20,0,40" Stretch="Uniform" Source="{Binding Image}" HorizontalAlignment="Left"/>
                                 </StackPanel>
 
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Gêneros" Margin="0,0,0,16"/>
-                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopGenres, Converter={StaticResource DataGenreConverter}}" />
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Consoles" Margin="0,20,0,16"/>
-                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopConsoles, Converter={StaticResource DataConsoleConverter}}" />
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Proprietário" Margin="0,20,0,16"/>
-                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Gêneros" Margin="0,0,0,16" Style="{StaticResource HeaderTextStyle}" />
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopGenres, Converter={StaticResource DataGenreConverter}}" Style="{StaticResource BaselineTextStyle}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Consoles" Margin="0,20,0,16" Style="{StaticResource HeaderTextStyle}" />
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopConsoles, Converter={StaticResource DataConsoleConverter}}" Style="{StaticResource BaselineTextStyle}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Proprietário" Margin="0,20,0,16" Style="{StaticResource HeaderTextStyle}" />
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" Style="{StaticResource BaselineTextStyle}" />
                                 </StackPanel>
 
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Informações" Margin="0,24,0,16"/>
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Informações" Margin="0,24,0,16" Style="{StaticResource HeaderTextStyle}"/>
                                     <ScrollViewer Style="{StaticResource VerticalScrollViewerStyle}">
                                         <Grid>
-                                            <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Content}" TextWrapping="Wrap" />
+                                            <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Content}" TextWrapping="Wrap" Style="{StaticResource BaselineTextStyle}" />
                                         </Grid>
                                     </ScrollViewer>
                                 </StackPanel>
@@ -202,20 +205,20 @@
                             <!-- Vertical StackPanel for item-detail layout -->
                             <StackPanel Orientation="Vertical" Margin="20,0,20,0">
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource HeaderTextStyle}"/>
                                     <Image x:Name="image" Width="260" Margin="0,12,0,40" Stretch="Uniform" Source="{Binding Image}" HorizontalAlignment="Left"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Gêneros" Margin="0,0,0,16"/>
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Gêneros" Margin="0,0,0,16" Style="{StaticResource HeaderTextStyle}"/>
                                     <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopGenres, Converter={StaticResource DataGenreConverter}}" />
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Consoles" Margin="0,20,0,16"/>
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Consoles" Margin="0,20,0,16" Style="{StaticResource HeaderTextStyle}"/>
                                     <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopConsoles, Converter={StaticResource DataConsoleConverter}}" />
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Proprietário" Margin="0,20,0,16"/>
-                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Proprietário" Margin="0,20,0,16" Style="{StaticResource HeaderTextStyle}"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" Style="{StaticResource BaselineTextStyle}" />
                                 </StackPanel>
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock FontSize="20" FontWeight="Light" Text="Informações" Margin="0,0,0,16"/>
-                                    <TextBlock FontSize="16" FontWeight="Light" TextWrapping="Wrap" Text="{Binding Content}" />
+                                    <TextBlock FontSize="20" FontWeight="Light" Text="Informações" Margin="0,0,0,16" Style="{StaticResource HeaderTextStyle}"/>
+                                    <TextBlock FontSize="16" FontWeight="Light" TextWrapping="Wrap" Text="{Binding Content}" Style="{StaticResource BaselineTextStyle}" />
                                 </StackPanel>
                             </StackPanel>
                         </ScrollViewer>
