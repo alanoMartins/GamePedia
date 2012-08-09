@@ -64,15 +64,10 @@
 
             <FlipView.ItemTemplate>
                 <DataTemplate>
-
-                    <!--
-                        UserControl chosen as the templated item because it supports visual state management
-                        Loaded/unloaded events explicitly subscribe to view state updates from the page
-                    -->
                     <UserControl Loaded="StartLayoutUpdates" Unloaded="StopLayoutUpdates">
-                        <ScrollViewer x:Name="scrollViewer" Style="{StaticResource HorizontalScrollViewerStyle}" Grid.Row="1">
+                        <ScrollViewer x:Name="scrollViewer" Style="{StaticResource VerticalScrollViewerStyle}" Grid.Row="1">
 
-                            <!-- Content is allowed to flow across as many columns as needed -->
+                            <!-- Three-column grid for item-detail layout -->
                             <Grid Margin="120,0,20,20">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="400" />
@@ -85,7 +80,7 @@
                                 <StackPanel Orientation="Vertical" Grid.Column="0">
                                     <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap"/>
                                     <Image x:Name="image" Width="400" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding Image}"/>
-                                    <StackPanel Orientation="Vertical">
+                                    <StackPanel Orientation="Horizontal">
                                         <TextBlock FontSize="26.667" FontWeight="Light" Text="Sobre o jogo: "/>
                                         <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Description}" Margin="0,0,0,8" TextWrapping="Wrap" />
                                     </StackPanel>
@@ -111,7 +106,6 @@
                             </Grid>
 
                             <VisualStateManager.VisualStateGroups>
-
                                 <!-- Visual states reflect the application's view state inside the FlipView -->
                                 <VisualStateGroup x:Name="ApplicationViewStates">
                                     <VisualState x:Name="FullScreenLandscape"/>
@@ -144,7 +138,92 @@
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>
+        
+        <!-- FlipView used in portrait mode -->
+        <FlipView
+            x:Name="portraitFlipView"
+            AutomationProperties.AutomationId="ItemsFlipView"
+            AutomationProperties.Name="Item Details"
+            Grid.Row="1"
+            Margin="0,-3,20,0"
+            ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
+            Visibility="Collapsed">
 
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <UserControl Loaded="StartLayoutUpdates" Unloaded="StopLayoutUpdates">
+                        <ScrollViewer x:Name="scrollViewer" Style="{StaticResource VerticalScrollViewerStyle}" Grid.Row="1">
+
+                            <!-- Vertical StackPanel for item-detail layout -->
+                            <StackPanel Orientation="Vertical" Margin="100,0,20,0">
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap"/>
+                                    <Image x:Name="image" Width="400" Margin="0,20,0,40" Stretch="Uniform" Source="{Binding Image}" HorizontalAlignment="Left"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Gêneros" Margin="0,0,0,16"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopGenres, Converter={StaticResource DataGenreConverter}}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Consoles" Margin="0,20,0,16"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopConsoles, Converter={StaticResource DataConsoleConverter}}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Proprietário" Margin="0,20,0,16"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" />
+                                </StackPanel>
+
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Informações" Margin="0,24,0,16"/>
+                                    <ScrollViewer Style="{StaticResource VerticalScrollViewerStyle}">
+                                        <Grid>
+                                            <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Content}" TextWrapping="Wrap" />
+                                        </Grid>
+                                    </ScrollViewer>
+                                </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </UserControl>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+
+        <FlipView
+            x:Name="snappedFlipView"
+            AutomationProperties.AutomationId="ItemsFlipView"
+            AutomationProperties.Name="Item Details"
+            Grid.Row="1"
+            Margin="0,-3,0,0"
+            ItemsSource="{Binding Source={StaticResource itemsViewSource}}"
+            Visibility="Collapsed">
+
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <UserControl Loaded="StartLayoutUpdates" Unloaded="StopLayoutUpdates">
+                        <ScrollViewer x:Name="scrollViewer" Style="{StaticResource VerticalScrollViewerStyle}" Grid.Row="1">
+
+                            <!-- Vertical StackPanel for item-detail layout -->
+                            <StackPanel Orientation="Vertical" Margin="20,0,20,0">
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap"/>
+                                    <Image x:Name="image" Width="260" Margin="0,12,0,40" Stretch="Uniform" Source="{Binding Image}" HorizontalAlignment="Left"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Gêneros" Margin="0,0,0,16"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopGenres, Converter={StaticResource DataGenreConverter}}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Consoles" Margin="0,20,0,16"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopConsoles, Converter={StaticResource DataConsoleConverter}}" />
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Proprietário" Margin="0,20,0,16"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" />
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock FontSize="20" FontWeight="Light" Text="Informações" Margin="0,0,0,16"/>
+                                    <TextBlock FontSize="16" FontWeight="Light" TextWrapping="Wrap" Text="{Binding Content}" />
+                                </StackPanel>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </UserControl>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+        
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->
@@ -158,6 +237,12 @@
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="backButton" Storyboard.TargetProperty="Style">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource PortraitBackButtonStyle}"/>
                         </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="flipView" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="portraitFlipView" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
+                        </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
 
@@ -169,6 +254,13 @@
                         </ObjectAnimationUsingKeyFrames>
                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="pageTitle" Storyboard.TargetProperty="Style">
                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource SnappedPageHeaderTextStyle}"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="flipView" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="snappedFlipView" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Visible"/>
                         </ObjectAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
