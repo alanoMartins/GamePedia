@@ -46,8 +46,18 @@ namespace GamePedia.DataModel
             set { this.SetProperty(ref this._description, value); }
         }
 
-        private ImageSource _image = null;
         private String _imagePath = null;
+        public String ImagePath
+        {
+            get
+            {
+
+                return _imagePath;
+            }
+        }
+
+        private ImageSource _image = null;
+        
         public ImageSource Image
         {
             get

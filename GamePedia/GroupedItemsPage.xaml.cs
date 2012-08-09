@@ -44,6 +44,8 @@ namespace GamePedia
             var producersAndGenres = GamePediaDataSource.GetProducers((String)navigationParameter);
             this.DefaultViewModel["Groups"] = producersAndGenres;
 
+            this.groupGridView.ItemsSource = producersAndGenres;
+
             //var genreDataGroup = GamePediaDataSource.GetGenres((String)navigationParameter);
             //this.DefaultViewModel["GroupGenre"] = genreDataGroup;
         }
