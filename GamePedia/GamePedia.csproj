@@ -185,7 +185,7 @@
     <Content Include="Assets\Producer\nintendo.png" />
     <Content Include="Assets\Producer\sega.png" />
     <Content Include="Assets\Producer\sony.jpg" />
-    <Content Include="Assets\SmallLogo.png.png" />
+    <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SpashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\LightGray.png" />
