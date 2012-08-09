@@ -166,8 +166,12 @@
     <Content Include="Assets\Item\Asura.png" />
     <Content Include="Assets\Item\ffIX.jpg" />
     <Content Include="Assets\Item\haloce.jpg" />
+    <Content Include="Assets\Item\mario64.jpg" />
     <Content Include="Assets\Item\nfl2002.jpg" />
     <Content Include="Assets\Item\pes6.jpg" />
+    <Content Include="Assets\Item\sonic.png" />
+    <Content Include="Assets\Item\ssbb.jpg" />
+    <Content Include="Assets\Item\topgear2.jpg" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\Producer\genre.png" />
     <Content Include="Assets\Producer\microsoft.jpg" />
