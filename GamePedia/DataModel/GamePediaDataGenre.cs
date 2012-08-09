@@ -16,17 +16,6 @@ namespace GamePedia.DataModel
         {
             
         }
-
-        private ObservableCollection<GamePediaDataItem> _itens = new ObservableCollection<GamePediaDataItem>();
-        private ObservableCollection<GamePediaDataItem> Itens
-        { 
-            get { return this._itens; }
-            set { this.SetProperty(ref this._itens, value); }
-        }
-        public IEnumerable<GamePediaDataItem> TopItens
-        {
-            get { return this._itens.Take(12); }
-        }
     }
 
     public class DataGenreConverter : IValueConverter

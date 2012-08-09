@@ -72,7 +72,7 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="400" />
                                     <ColumnDefinition Width="40" />
-                                    <ColumnDefinition Width="360" />
+                                    <ColumnDefinition Width="230" />
                                     <ColumnDefinition Width="40" />
                                     <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
@@ -80,9 +80,9 @@
                                 <StackPanel Orientation="Vertical" Grid.Column="0">
                                     <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap"/>
                                     <Image x:Name="image" Width="400" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding Image}"/>
-                                    <StackPanel Orientation="Horizontal">
+                                    <StackPanel Orientation="Vertical">
                                         <TextBlock FontSize="26.667" FontWeight="Light" Text="Sobre o jogo: "/>
-                                        <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Description}" Margin="0,0,0,8" TextWrapping="Wrap" />
+                                        <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Description}" Margin="0,10,0,8" TextWrapping="Wrap" />
                                     </StackPanel>
                                 </StackPanel>
 
@@ -92,7 +92,7 @@
                                     <TextBlock FontSize="26.667" FontWeight="Light" Text="Consoles" Margin="0,20,0,16"/>
                                     <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding TopConsoles, Converter={StaticResource DataConsoleConverter}}" />
                                     <TextBlock FontSize="26.667" FontWeight="Light" Text="Proprietário" Margin="0,20,0,16"/>
-                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" />
+                                    <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" Margin="0,0,0,30" />
                                 </StackPanel>
 
                                 <StackPanel Orientation="Vertical" Grid.Column="4">
