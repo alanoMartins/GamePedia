@@ -61,7 +61,7 @@ namespace GamePedia
             // Navigate to the appropriate destination page, configuring the new page
             // by passing required information as a navigation parameter
             var itemId = ((GamePediaDataItem)e.ClickedItem).UniqueId;
-            var parameter = new DataItemParameters() { ItemID = itemId, GroupID = this.group.UniqueId };
+            var parameter = new KeyValuePair<string, string>(itemId, this.group.UniqueId);
             this.Frame.Navigate(typeof(ItemDetailPage), parameter);
         }
     }

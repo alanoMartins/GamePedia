@@ -8,6 +8,7 @@ using Windows.UI.Xaml.Data;
 
 namespace GamePedia.DataModel
 {
+    [System.Runtime.Serialization.DataContract]
     public class GamePediaDataConsole : GamePediaDataGroup
     {
         public GamePediaDataConsole(String uniqueId, String title, String imagePath, String description)

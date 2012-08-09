@@ -29,7 +29,7 @@ namespace GamePedia
         private UIElement _previousContent;
         private ApplicationExecutionState _previousExecutionState;
 
-        private DataItemParameters parameters = null;
+        private KeyValuePair<string, string> parameters;
         //Colecao de GamePediaDataItem representando resultado da pesquisa
         private Dictionary<string, List<GamePediaDataItem>> _results = new Dictionary<string, List<GamePediaDataItem>>();
 
@@ -173,7 +173,7 @@ namespace GamePedia
                 //       to a collection of items with bindable Image, Title, Subtitle, and Description properties
 
                 this.DefaultViewModel["Results"] = _results[selectedFilter.Name];
-                this.parameters = new DataItemParameters() { GroupID = selectedFilter.Id };
+                this.parameters = new KeyValuePair<string, string>(selectedFilter.Id, "");
 
                 // Ensure results are found
                 object results;
@@ -261,7 +261,7 @@ namespace GamePedia
 
         private void OnItemClick(object sender, ItemClickEventArgs e)
         {
-            this.parameters.ItemID = ((GamePediaDataItem)e.ClickedItem).UniqueId;
+            this.parameters = new KeyValuePair<string, string>(((GamePediaDataItem)e.ClickedItem).UniqueId, this.parameters.Value);
             this.Frame.Navigate(typeof(ItemDetailPage), this.parameters);
         }
     }

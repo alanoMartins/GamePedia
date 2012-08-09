@@ -116,9 +116,13 @@ namespace GamePedia
         /// <param name="e">Details about the suspend request.</param>
         private async void OnSuspending(object sender, SuspendingEventArgs e)
         {
-            var deferral = e.SuspendingOperation.GetDeferral();
-            await SuspensionManager.SaveAsync();
-            deferral.Complete();
+            try
+            {
+                var deferral = e.SuspendingOperation.GetDeferral();
+                await SuspensionManager.SaveAsync();
+                deferral.Complete();
+            }
+            catch { }
         }
 
         /// <summary>
@@ -152,8 +156,8 @@ namespace GamePedia
         /// <param name="args">Details about the activation request.</param>
         protected override void OnShareTargetActivated(Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs args)
         {
-            var shareTargetPage = new GamePedia.SharePage();
-            shareTargetPage.Activate(args);
+            //var shareTargetPage = new GamePedia.SharePage();
+            //shareTargetPage.Activate(args);
         }
 
         private void OnCommandRequested(SettingsPane sender, SettingsPaneCommandsRequestedEventArgs args)

@@ -22,6 +22,19 @@ namespace GamePedia.Common
     /// </summary>
     internal sealed class SuspensionManager
     {
+        static SuspensionManager()
+        {
+            _knownTypes.Add(typeof(KeyValuePair<string, string>));
+            _knownTypes.Add(typeof(GamePedia.DataModel.GamePediaDataItem));
+            _knownTypes.Add(typeof(GamePedia.DataModel.GamePediaDataGroupBase));
+            _knownTypes.Add(typeof(GamePedia.DataModel.GamePediaDataGroup));
+            _knownTypes.Add(typeof(GamePedia.DataModel.GamePediaDataGenre));
+            _knownTypes.Add(typeof(GamePedia.DataModel.GamePediaDataConsole));
+            _knownTypes.Add(typeof(GamePedia.DataModel.GamePediaDataCommon));
+            _knownTypes.Add(typeof(GamePedia.DataModel.DataGenreConverter));
+            _knownTypes.Add(typeof(GamePedia.DataModel.DataConsoleConverter));
+        }
+
         private static Dictionary<string, object> _sessionState = new Dictionary<string, object>();
         private static List<Type> _knownTypes = new List<Type>();
         private const string sessionStateFilename = "_sessionState.xml";
@@ -226,7 +239,11 @@ namespace GamePedia.Common
         private static void SaveFrameNavigationState(Frame frame)
         {
             var frameState = SessionStateForFrame(frame);
-            frameState["Navigation"] = frame.GetNavigationState();
+            try
+            {
+                frameState["Navigation"] = frame.GetNavigationState();
+            }
+            catch { }
         }
     }
 }

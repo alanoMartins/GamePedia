@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 using Windows.UI.Xaml.Data;
 
 namespace GamePedia.Common
@@ -9,6 +10,7 @@ namespace GamePedia.Common
     /// Implementation of <see cref="INotifyPropertyChanged"/> to simplify models.
     /// </summary>
     [Windows.Foundation.Metadata.WebHostHidden]
+    [DataContract]
     public abstract class BindableBase : INotifyPropertyChanged
     {
         /// <summary>

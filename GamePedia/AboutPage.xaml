@@ -10,15 +10,17 @@
     d:DesignWidth="50">
     
     <Grid>
-        <StackPanel>
-            <TextBlock Text="GamePedia" FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="26.667" />
-            <TextBlock Text="Shared Fun" FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="18" />
-        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <StackPanel>
+                <TextBlock Text="GamePedia" FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="26.667" />
+                <TextBlock Text="Shared Fun" FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="18" />
+            </StackPanel>
         
-       <StackPanel>
-            <TextBlock Text="GamePedia was developed by Alano Martins and Kleber Bernardo" FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="18" Margin="0,100,0,0"/>
-           
-       </StackPanel>
-
+            <StackPanel>
+                <TextBlock Text="Versão 1.0.0.1" FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="18" TextWrapping="Wrap" Margin="10,10,0,0"/>
+                <TextBlock Text="&#x25ba; Alano Martins (alanomartinspinto@gmail.com)" FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="18" TextWrapping="Wrap" Margin="10,10,0,0" />
+                <TextBlock Text="&#x25ba; Kleber Bernardo (kleberbernardo@outlook.com)" FontFamily="Segoe UI" FontWeight="SemiLight" FontSize="18" TextWrapping="Wrap" Margin="10,10,0,0"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>

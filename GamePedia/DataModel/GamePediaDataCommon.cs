@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Media;
@@ -13,6 +14,7 @@ namespace GamePedia.DataModel
     /// defines properties common to both.
     /// </summary>
     [Windows.Foundation.Metadata.WebHostHidden]
+    [DataContract]
     public abstract class GamePediaDataCommon : GamePedia.Common.BindableBase
     {
         private static Uri _baseUri = new Uri("ms-appx:///");

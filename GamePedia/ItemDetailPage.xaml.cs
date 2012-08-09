@@ -30,7 +30,7 @@ namespace GamePedia
     /// </summary>
     public sealed partial class ItemDetailPage : GamePedia.Common.LayoutAwarePage
     {
-        private DataItemParameters parameters = null;
+        private KeyValuePair<string, string> parameters;
         public ItemDetailPage()
         {
             this.InitializeComponent();
@@ -53,18 +53,18 @@ namespace GamePedia
             {
                 navigationParameter = pageState["SelectedItem"];
             }
-            this.parameters = (DataItemParameters)navigationParameter;
+            this.parameters = (KeyValuePair<string, string>)navigationParameter;
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
-            var item = GamePediaDataSource.GetItem(this.parameters.ItemID);
-            if (!string.IsNullOrEmpty(this.parameters.GroupID))
+            var item = GamePediaDataSource.GetItem(this.parameters.Key);
+            if (!string.IsNullOrEmpty(this.parameters.Value))
             {
-                var group = GamePediaDataSource.GetGroup(this.parameters.GroupID);
+                var group = GamePediaDataSource.GetGroup(this.parameters.Value);
                 this.DefaultViewModel["Group"] = group;
                 this.DefaultViewModel["Items"] = group.Items.Distinct();
             }
             else
             {
-                this.DefaultViewModel["Items"] = new GamePediaDataItem[1] { GamePediaDataSource.GetItem(parameters.ItemID) };
+                this.DefaultViewModel["Items"] = new GamePediaDataItem[1] { GamePediaDataSource.GetItem(parameters.Key) };
             }
             this.flipView.SelectedItem = item;
         }
@@ -98,7 +98,7 @@ namespace GamePedia
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
             var selectedItem = (GamePediaDataItem)this.flipView.SelectedItem;
-            this.parameters.ItemID = selectedItem.UniqueId;
+            this.parameters = new KeyValuePair<string,string>(this.parameters.Key, selectedItem.UniqueId);
             pageState["SelectedItem"] = this.parameters;
 
             DataTransferManager.GetForCurrentView().DataRequested -= ItemDetailPage_DataRequested;

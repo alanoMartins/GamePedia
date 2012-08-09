@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using GamePedia.Data;
@@ -11,6 +12,7 @@ namespace GamePedia.DataModel
     /// <summary>
     /// Generic item data model.
     /// </summary>
+    [DataContract]
     public class GamePediaDataItem : GamePediaDataCommon
     {
         public GamePediaDataItem(String uniqueId, String title, String imagePath, String description, String content, GamePediaDataGroupBase producer, params GamePediaDataGroup[] groups)
@@ -26,8 +28,9 @@ namespace GamePedia.DataModel
             }
             this._producer.Items.Add(this);
         }
-
         private GamePediaDataGroupBase _producer;
+        
+        
         public GamePediaDataGroupBase Producer
         {
             get { return _producer; }
@@ -47,15 +50,13 @@ namespace GamePedia.DataModel
             get { return this._groups; }
             set { this.SetProperty(ref this._groups, value); }
         }
-
-        public IEnumerable<GamePediaDataGenre> TopGenres
+        public ObservableCollection<GamePediaDataGenre> TopGenres
         {
-            get { return this._groups.Where(x => x is GamePediaDataGenre).Cast<GamePediaDataGenre>().Take(12); }
+            get { return new ObservableCollection<GamePediaDataGenre>(this._groups.Where(x => x is GamePediaDataGenre).Cast<GamePediaDataGenre>().Take(12)); }
         }
-
-        public IEnumerable<GamePediaDataConsole> TopConsoles
+        public ObservableCollection<GamePediaDataConsole> TopConsoles
         {
-            get { return this._groups.Where(x => x is GamePediaDataConsole).Cast<GamePediaDataConsole>().Take(12); }
+            get { return new ObservableCollection<GamePediaDataConsole>(this._groups.Where(x => x is GamePediaDataConsole).Cast<GamePediaDataConsole>().Take(12)); }
         }
     }
 }

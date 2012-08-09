@@ -11,6 +11,7 @@ namespace GamePedia.DataModel
     /// <summary>
     /// Generic group data model.
     /// </summary>
+    [System.Runtime.Serialization.DataContract]
     public abstract class GamePediaDataGroup : GamePediaDataCommon
     {
         public GamePediaDataGroup(String uniqueId, String title, String imagePath, String description, GroupType type)

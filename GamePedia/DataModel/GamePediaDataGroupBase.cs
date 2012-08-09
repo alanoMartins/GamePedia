@@ -8,6 +8,7 @@ using GamePedia.Data;
 
 namespace GamePedia.DataModel
 {
+    [System.Runtime.Serialization.DataContract]
     public class GamePediaDataGroupBase : GamePediaDataGroup
     {
         public GamePediaDataGroupBase(String uniqueId, String title, String imagePath, String description, String content, params GamePediaDataConsole[] consoles)
