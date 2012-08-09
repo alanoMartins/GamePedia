@@ -19,6 +19,7 @@ using GamePedia.Common;
 using Windows.ApplicationModel.DataTransfer;
 using System.Text;
 using Windows.Storage.Streams;
+using Windows.UI.Xaml.Media.Imaging;
 // The Item Detail Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234232
 
 namespace GamePedia
@@ -82,7 +83,7 @@ namespace GamePedia
 
             //Share imagens
             //ToDo:Verificar a path do item
-            var reference = RandomAccessStreamReference.CreateFromUri(new Uri(item.GetImagePath()));
+            var reference = RandomAccessStreamReference.CreateFromUri(((BitmapImage)item.Image).UriSource);  //(new Uri( , UriKind.RelativeOrAbsolute));
             request.Data.Properties.Thumbnail = reference;
             request.Data.SetBitmap(reference);
             request.Data.SetBitmap(reference);

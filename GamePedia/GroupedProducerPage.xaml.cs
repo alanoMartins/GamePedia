@@ -45,6 +45,8 @@ namespace GamePedia
             var group = GamePediaDataSource.GetProducter((String)navigationParameter);
             this.DefaultViewModel["Group"] = group;
             this.DefaultViewModel["Items"] = group.Groups;
+
+            
         }
 
         /// <summary>
