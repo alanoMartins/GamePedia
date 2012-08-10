@@ -15,9 +15,9 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="GamePedia.App">
-      <VisualElements DisplayName="GamePedia" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Game encyclopedia" ForegroundText="light" BackgroundColor="#FF7300">
+      <VisualElements DisplayName="GamePedia" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="Game encyclopedia" ForegroundText="light" BackgroundColor="#080808">
         <DefaultTile ShowName="allLogos" ShortName="GamePedia" WideLogo="Assets\WideLogo.png" />
-        <SplashScreen Image="Assets\SpashScreen.png" BackgroundColor="#FF7300" />
+        <SplashScreen Image="Assets\SpashScreen.png" BackgroundColor="#080808" />
       </VisualElements>
       <Extensions>
         <Extension Category="windows.search" />
