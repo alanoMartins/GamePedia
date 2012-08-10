@@ -19,8 +19,7 @@
     <!-- RichTextBlock styles -->
 
     <Style x:Key="BasicRichTextStyle" TargetType="RichTextBlock">
-        <Setter Property="Foreground" Value="Black" />
-        <!--Value="{StaticResource ApplicationForegroundThemeBrush}"/>-->
+        <Setter Property="Foreground" Value="{StaticResource ApplicationForegroundThemeBrush}"/>
         <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
         <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
         <Setter Property="TextTrimming" Value="WordEllipsis"/>
@@ -50,9 +49,7 @@
     <!-- TextBlock styles -->
 
     <Style x:Key="BasicTextStyle" TargetType="TextBlock">
-        <Setter Property="Foreground" Value="Black" />
-                
-                <!--Value="{StaticResource ApplicationForegroundThemeBrush}"/>-->
+        <Setter Property="Foreground" Value="{StaticResource ApplicationForegroundThemeBrush}"/>
         <Setter Property="FontSize" Value="{StaticResource ControlContentThemeFontSize}"/>
         <Setter Property="FontFamily" Value="{StaticResource ContentControlThemeFontFamily}"/>
         <Setter Property="TextTrimming" Value="WordEllipsis"/>
