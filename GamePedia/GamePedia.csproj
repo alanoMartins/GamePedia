@@ -100,12 +100,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <SDKReference Include="Callisto, Version=1.0.1">
-      <Name>Callisto</Name>
-    </SDKReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
@@ -177,10 +171,10 @@
     <Content Include="Assets\Item\topgear2.jpg" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\Producer\genre.png" />
-    <Content Include="Assets\Producer\microsoft.jpg" />
+    <Content Include="Assets\Producer\microsoft.png" />
     <Content Include="Assets\Producer\nintendo.png" />
     <Content Include="Assets\Producer\sega.png" />
-    <Content Include="Assets\Producer\sony.jpg" />
+    <Content Include="Assets\Producer\sony.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SpashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
@@ -222,6 +216,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Callisto, Version=1.0.1">
+      <Name>Callisto</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

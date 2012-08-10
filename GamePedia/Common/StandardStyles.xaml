@@ -64,6 +64,7 @@
 
     <Style x:Key="BaselineTextStyle" TargetType="TextBlock" BasedOn="{StaticResource BasicTextStyle}">
         <Setter Property="LineHeight" Value="26"/>
+        <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="LineStackingStrategy" Value="BlockLineHeight"/>
         <!-- Properly align text along its baseline -->
         <Setter Property="RenderTransform">

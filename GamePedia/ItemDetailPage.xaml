@@ -81,7 +81,7 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel Orientation="Vertical" Grid.Column="0">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" Style="{StaticResource HeaderTextStyle}" TextWrapping="Wrap"/>
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" Style="{StaticResource PageHeaderTextStyle}" TextWrapping="Wrap"/>
                                     <Image x:Name="image" Width="400" Margin="0,20,0,10" Stretch="Uniform" Source="{Binding Image}"/>
                                     <StackPanel Orientation="Vertical">
                                         <TextBlock FontSize="26.667" FontWeight="Light" Text="Sobre o jogo: " Style="{StaticResource BaselineTextStyle}" />
@@ -99,7 +99,7 @@
                                 </StackPanel>
 
                                 <StackPanel Orientation="Vertical" Grid.Column="4">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Informações" Margin="0,0,0,16" Style="{StaticResource HeaderTextStyle}"/>
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Informações" Margin="0,0,0,16" Style="{StaticResource PageHeaderTextStyle}"/>
                                     <ScrollViewer Style="{StaticResource VerticalScrollViewerStyle}">
                                         <Grid>
                                             <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Content}" TextWrapping="Wrap" Style="{StaticResource BaselineTextStyle}" />
@@ -160,7 +160,7 @@
                             <!-- Vertical StackPanel for item-detail layout -->
                             <StackPanel Orientation="Vertical" Margin="100,0,20,0">
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource HeaderTextStyle}"/>
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PageHeaderTextStyle}"/>
                                     <Image x:Name="image" Width="400" Margin="0,20,0,40" Stretch="Uniform" Source="{Binding Image}" HorizontalAlignment="Left"/>
                                 </StackPanel>
 
@@ -174,7 +174,7 @@
                                 </StackPanel>
 
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Informações" Margin="0,24,0,16" Style="{StaticResource HeaderTextStyle}"/>
+                                    <TextBlock FontSize="26.667" FontWeight="Light" Text="Informações" Margin="0,24,0,16" Style="{StaticResource PageHeaderTextStyle}"/>
                                     <ScrollViewer Style="{StaticResource VerticalScrollViewerStyle}">
                                         <Grid>
                                             <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Content}" TextWrapping="Wrap" Style="{StaticResource BaselineTextStyle}" />
@@ -205,7 +205,7 @@
                             <!-- Vertical StackPanel for item-detail layout -->
                             <StackPanel Orientation="Vertical" Margin="20,0,20,0">
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource HeaderTextStyle}"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" Text="{Binding Title}" TextWrapping="Wrap" Style="{StaticResource PageHeaderTextStyle}"/>
                                     <Image x:Name="image" Width="260" Margin="0,12,0,40" Stretch="Uniform" Source="{Binding Image}" HorizontalAlignment="Left"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Vertical">
@@ -217,7 +217,7 @@
                                     <TextBlock FontSize="20" FontWeight="Light" LineHeight="32.5" Text="{Binding Producer.Title}" Style="{StaticResource BaselineTextStyle}" />
                                 </StackPanel>
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock FontSize="20" FontWeight="Light" Text="Informações" Margin="0,0,0,16" Style="{StaticResource HeaderTextStyle}"/>
+                                    <TextBlock FontSize="20" FontWeight="Light" Text="Informações" Margin="0,0,0,16" Style="{StaticResource PageHeaderTextStyle}"/>
                                     <TextBlock FontSize="16" FontWeight="Light" TextWrapping="Wrap" Text="{Binding Content}" Style="{StaticResource BaselineTextStyle}" />
                                 </StackPanel>
                             </StackPanel>
