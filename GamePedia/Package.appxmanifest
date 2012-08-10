@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="61fb6e61-961e-47f0-bcaf-f0a6ba5e3fbe" Publisher="CN=MIC10" Version="1.0.0.0" />
+  <Identity Name="61fb6e61-961e-47f0-bcaf-f0a6ba5e3fbe" Publisher="CN=MIC10" Version="1.0.1.0" />
   <Properties>
     <DisplayName>GamePedia</DisplayName>
     <PublisherDisplayName>MIC10</PublisherDisplayName>
@@ -21,12 +21,6 @@
       </VisualElements>
       <Extensions>
         <Extension Category="windows.search" />
-        <Extension Category="windows.shareTarget">
-          <ShareTarget>
-            <DataFormat>text</DataFormat>
-            <DataFormat>uri</DataFormat>
-          </ShareTarget>
-        </Extension>
       </Extensions>
     </Application>
   </Applications>
